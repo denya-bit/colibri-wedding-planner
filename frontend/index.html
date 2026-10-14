@@ -1067,21 +1067,11 @@ _initStorage(function() {
   // Авторизован — показываем приложение
   document.getElementById("vk_auth_gate").style.display = "none";
   document.body.classList.remove("vk-locked");
-  // СНАЧАЛА пробуем прямую загрузку с сервера
-  var _directUid = 0;
-  try {
-    var _vp = new URLSearchParams(window.location.search);
-    var _vid = _vp.get("vk_user_id");
-    if (_vid && _vid !== "0") _directUid = parseInt(_vid);
-    else { var _tmp = localStorage.getItem("colibri_sync_user_id"); if (_tmp) _directUid = _tmp; }
-  } catch(e) {}
-  fetch(API_BASE + "/user-data/" + _directUid).then(function(r){ return r.json(); }).then(function(res) {
-    if (res && res.ok && res.data) {
-      _loadFromServer(res.data);
-      console.log("Direct restore OK from server");
-    }
+  // СНАЧАЛА загружаем с сервера через JSONP (обходит CORS)
+  _directRestore(function() {
+    console.log("JSONP restore done");
     _startApp();
-  }).catch(function(){ _startApp(); });
+  });
 
   function _startApp() {
   // АВТОВОССТАНОВЛЕНИЕ с сервера — ЖДЁМ завершения перед рендером!
