@@ -1,0 +1,53 @@
+name: Deploy to Colibri Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Backup current version
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASS }}
+          script: |
+            cd /root/colibri
+            tar czf backups/frontend_$(date +%Y%m%d_%H%M%S).tar.gz build/index.html 2>/dev/null || true
+            cp build/index.html build/index.html.bak
+
+      - name: Deploy frontend
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASS }}
+          source: "frontend/index.html"
+          target: "/root/colibri/build/"
+
+      - name: Deploy backend
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASS }}
+          source: "backend/api.py"
+          target: "/root/colibri/api/"
+
+      - name: Sync and restart
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASS }}
+          script: |
+            cp /root/colibri/build/index.html /var/www/colibri/index.html
+            systemctl restart colibri-api.service
+            sleep 2
+            curl -sf https://app.nevessta.ru/api/health && echo " OK" || echo " FAIL"
