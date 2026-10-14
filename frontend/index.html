@@ -769,7 +769,12 @@ function _directSave(key, val) {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({user_id: uid, payload: _payload})
-  }).catch(function(){});
+  }).then(function(r) {
+    if (r.ok) { console.log("Direct save OK"); }
+    else { console.log("Direct save FAIL:", r.status); }
+  }).catch(function(e) {
+    console.log("Direct save ERROR:", e.message);
+  });
 }
 
 function _initStorage(cb) {
