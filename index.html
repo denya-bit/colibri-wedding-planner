@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>!function(){"use strict";var e=function(){return e=Object.assign||function(e){for(var t,n=1,o=arguments.length;n<o;n++)for(var r in t=arguments[n])Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e},e.apply(this,arguments)};function t(e,t,n,o){return new(n||(n=Promise))((function(r,p){function i(e){try{s(o.next(e))}catch(e){p(e)}}function a(e){try{s(o.throw(e))}catch(e){p(e)}}function s(e){var t;e.done?r(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(i,a)}s((o=o.apply(e,t||[])).next())}))}function n(e,t){var n,o,r,p,i={label:0,sent:function(){if(1&r[0])throw r[1];return r[1]},trys:[],ops:[]};return p={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(p[Symbol.iterator]=function(){return this}),p;function a(a){return function(s){return function(a){if(n)throw new TypeError("Generator is already executing.");for(;p&&(p=0,a[0]&&(i=0)),i;)try{if(n=1,o&&(r=2&a[0]?o.return:a[0]?o.throw||((r=o.return)&&r.call(o),0):o.next)&&!(r=r.call(o,a[1])).done)return r;switch(o=0,r&&(a=[2&a[0],r.value]),a[0]){case 0:case 1:r=a;break;case 4:return i.label++,{value:a[1],done:!1};case 5:i.label++,o=a[1],a=[0];continue;case 7:a=i.ops.pop(),i.trys.pop();continue;default:if(!(r=i.trys,(r=r.length>0&&r[r.length-1])||6!==a[0]&&2!==a[0])){i=0;continue}if(3===a[0]&&(!r||a[1]>r[0]&&a[1]<r[3])){i.label=a[1];break}if(6===a[0]&&i.label<r[1]){i.label=r[1],r=a;break}if(r&&i.label<r[2]){i.label=r[2],i.ops.push(a);break}r[2]&&i.ops.pop(),i.trys.pop();continue}a=t.call(e,i)}catch(e){a=[6,e],o=0}finally{n=r=0}if(5&a[0])throw a[1];return{value:a[0]?a[1]:void 0,done:!0}}([a,s])}}}function o(e,t,n){if(n||2===arguments.length)for(var o,r=0,p=t.length;r<p;r++)!o&&r in t||(o||(o=Array.prototype.slice.call(t,0,r)),o[r]=t[r]);return e.concat(o||Array.prototype.slice.call(t))}function r(t,n,o){var r=function(e){var t={current:0,next:function(){return++this.current}},n={};return{add:function(o,r){var p=null!=r?r:"".concat(t.next(),"_").concat(e);return n[p]=o,p},resolve:function(e,t,o){var r=n[e];r&&(o(t)?r.resolve(t):r.reject(t),n[e]=null)}}}(o);return n((function(e){if(e.detail&&e.detail.data&&"object"==typeof e.detail.data&&"request_id"in e.detail.data){var t=e.detail.data,n=t.request_id,o=function(e,t){var n={};for(var o in e)Object.prototype.hasOwnProperty.call(e,o)&&t.indexOf(o)<0&&(n[o]=e[o]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var r=0;for(o=Object.getOwnPropertySymbols(e);r<o.length;r++)t.indexOf(o[r])<0&&Object.prototype.propertyIsEnumerable.call(e,o[r])&&(n[o[r]]=e[o[r]])}return n}(t,["request_id"]);n&&r.resolve(n,o,(function(e){return!("error_type"in e)}))}})),function(n,o){return void 0===o&&(o={}),new Promise((function(p,i){var a=r.add({resolve:p,reject:i},o.request_id);t(n,e(e({},o),{request_id:a}))}))}}var p,i="undefined"!=typeof window,a=Boolean(i&&window.AndroidBridge),s=Boolean(i&&window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.VKWebAppClose),u=Boolean(i&&window.ReactNativeWebView&&"function"==typeof window.ReactNativeWebView.postMessage),c=i&&!a&&!s,l=c&&/(^\?|&)vk_platform=mobile_web(&|$)/.test(location.search),d=c?"message":"VKWebAppEvent",b=o(["VKWebAppInit","VKWebAppGetCommunityAuthToken","VKWebAppAddToCommunity","VKWebAppAddToHomeScreenInfo","VKWebAppClose","VKWebAppCopyText","VKWebAppCreateHash","VKWebAppGetUserInfo","VKWebAppSetLocation","VKWebAppSendToClient","VKWebAppGetClientVersion","VKWebAppGetPhoneNumber","VKWebAppGetEmail","VKWebAppGetGroupInfo","VKWebAppGetGeodata","VKWebAppGetCommunityToken","VKWebAppGetConfig","VKWebAppGetLaunchParams","VKWebAppSetTitle","VKWebAppGetAuthToken","VKWebAppCallAPIMethod","VKWebAppJoinGroup","VKWebAppLeaveGroup","VKWebAppAllowMessagesFromGroup","VKWebAppDenyNotifications","VKWebAppAllowNotifications","VKWebAppOpenPayForm","VKWebAppOpenApp","VKWebAppShare","VKWebAppShowWallPostBox","VKWebAppScroll","VKWebAppShowOrderBox","VKWebAppShowLeaderBoardBox","VKWebAppShowInviteBox","VKWebAppShowRequestBox","VKWebAppAddToFavorites","VKWebAppShowStoryBox","VKWebAppStorageGet","VKWebAppStorageGetKeys","VKWebAppStorageSet","VKWebAppFlashGetInfo","VKWebAppSubscribeStoryApp","VKWebAppOpenWallPost","VKWebAppCheckAllowedScopes","VKWebAppCheckBannerAd","VKWebAppHideBannerAd","VKWebAppShowBannerAd","VKWebAppCheckNativeAds","VKWebAppShowNativeAds","VKWebAppRetargetingPixel","VKWebAppConversionHit","VKWebAppShowSubscriptionBox","VKWebAppCheckSurvey","VKWebAppShowSurvey","VKWebAppScrollTop","VKWebAppScrollTopStart","VKWebAppScrollTopStop","VKWebAppShowSlidesSheet","VKWebAppTranslate","VKWebAppRecommend","VKWebAppAddToProfile","VKWebAppGetFriends"],c&&!l?["VKWebAppResizeWindow","VKWebAppAddToMenu","VKWebAppShowInstallPushBox","VKWebAppShowCommunityWidgetPreviewBox","VKWebAppCallStart","VKWebAppCallJoin","VKWebAppCallGetStatus"]:["VKWebAppShowImages"],!0),f=i?window.AndroidBridge:void 0,A=s?window.webkit.messageHandlers:void 0,w=c?parent:void 0;var W,V,K,S,h,v,y,m,E,g;!function(e){e.REWARD="reward",e.INTERSTITIAL="interstitial"}(W||(W={})),function(e){e.RESIZE="resize",e.OVERLAY="overlay"}(V||(V={})),function(e){e.TOP="top",e.BOTTOM="bottom"}(K||(K={})),function(e){e.LEFT="left",e.RIGHT="right",e.CENTER="center"}(S||(S={})),function(e){e.COMPACT="compact",e.REGULAR="regular"}(h||(h={})),function(e){e.HORIZONTAL="horizontal",e.VERTICAL="vertical"}(v||(v={})),function(e){e.CAMERA="camera",e.LOCATION="location",e.PHOTO="photo"}(y||(y={})),function(e){e.RU="ru",e.UK="uk",e.UA="ua",e.EN="en",e.BE="be",e.KZ="kz",e.PT="pt",e.ES="es"}(m||(m={})),function(e){e.ADMIN="admin",e.EDITOR="editor",e.MEMBER="member",e.MODER="moder",e.NONE="none"}(E||(E={})),function(e){e.DESKTOP_WEB="desktop_web",e.DESKTOP_WEB_MESSENGER="desktop_web_messenger",e.DESKTOP_APP_MESSENGER="desktop_app_messenger",e.MOBILE_WEB="mobile_web",e.MOBILE_ANDROID="mobile_android",e.MOBILE_ANDROID_MESSENGER="mobile_android_messenger",e.MOBILE_IPHONE="mobile_iphone",e.MOBILE_IPHONE_MESSENGER="mobile_iphone_messenger",e.MOBILE_IPAD="mobile_ipad"}(g||(g={}));var O=function(e){var i=void 0,l=[],W=Math.random().toString(36).substring(2,5);function V(e){l.push(e)}function K(e){return a?!(!f||"function"!=typeof f[e]):s?!(!A||!A[e]||"function"!=typeof A[e].postMessage):!!c&&b.includes(e)}function S(){return s||a}function h(){return c&&window.parent!==window}function v(){return S()||h()}function y(e){if(s||a)return o([],l,!0).map((function(t){return t.call(null,e)}));var t=null==e?void 0:e.data;if(c&&t){if(u&&"string"==typeof t)try{t=JSON.parse(t)}catch(e){}var n=t.type,r=t.data,p=t.frameId;n&&("VKWebAppSettings"!==n?o([],l,!0).map((function(e){return e({detail:{type:n,data:r}})})):i=p)}}u&&/(android)/i.test(navigator.userAgent)?document.addEventListener(d,y):"undefined"!=typeof window&&"addEventListener"in window&&window.addEventListener(d,y);var m=r((function(t,n){f&&f[t]?f[t](JSON.stringify(n)):A&&A[t]&&"function"==typeof A[t].postMessage?A[t].postMessage(n):u?window.ReactNativeWebView.postMessage(JSON.stringify({handler:t,params:n})):w&&"function"==typeof w.postMessage&&w.postMessage({handler:t,params:n,type:"vk-connect",webFrameId:i,connectVersion:e},"*")}),V,W);return V((function(e){if(e.detail&&"SetSupportedHandlers"===e.detail.type)p=new Set(e.detail.data.supportedHandlers)})),{send:m,sendPromise:m,subscribe:V,unsubscribe:function(e){var t=l.indexOf(e);t>-1&&l.splice(t,1)},supports:function(e){return console.warn("bridge.supports method is deprecated. Use bridge.supportsAsync instead."),K(e)},supportsAsync:function(e){return t(this,void 0,void 0,(function(){var t;return n(this,(function(n){switch(n.label){case 0:if(a||s)return[2,K(e)];if(p)return[2,p.has(e)];n.label=1;case 1:return n.trys.push([1,3,,4]),[4,m("SetSupportedHandlers")];case 2:return t=n.sent(),p=new Set(t.supportedHandlers),[3,4];case 3:return n.sent(),p=new Set(["VKWebAppInit"]),[3,4];case 4:return[2,p.has(e)]}}))}))},isWebView:S,isIframe:h,isEmbedded:v,isStandalone:function(){return!v()}}}("2.15.12");window.vkBridge=window.vkConnect=O}();
+//# sourceMappingURL=browser.min.js.map
+
+
+
+</script>
+<script>
+(function(){
+  if(window.AndroidBridge&&window.AndroidBridge.VKWebAppInit){
+    try{window.AndroidBridge.VKWebAppInit(JSON.stringify({}));}catch(e){}
+    return;
+  }
+  if(window.webkit&&window.webkit.messageHandlers){
+    var k=Object.keys(window.webkit.messageHandlers);
+    for(var n=0;n<k.length;n++){
+      try{window.webkit.messageHandlers[k[n]].postMessage(JSON.stringify({type:"VKWebAppInit",data:{},id:1}));}catch(e){}
+    }
+    return;
+  }
+  if(window.parent&&window.parent!==window){
+    try{window.parent.postMessage(JSON.stringify({type:"VKWebAppInit",data:{},id:1}),"*");}catch(e){}
+  }
+})();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#E1306C">
+<title>Colibri</title>
+<style>
+body.vk-locked > *:not(#vk_auth_gate) { display: none !important; }
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#1a2415;--card:#243020;--card2:#2d3b28;--text:#e8f0e4;--text2:#a0b898;--border:#3a4d32;--accent:#00E5FF;--accent-dark:#00b8cc;--accent-text:#3d5528;--header1:#3d5528;--header2:#4F6F3A;--header3:#5f8247}
+[data-theme="moss"]{--bg:#1a2415;--card:#243020;--card2:#2d3b28;--text:#e8f0e4;--text2:#a0b898;--border:#3a4d32;--accent:#00E5FF;--accent-dark:#00b8cc;--accent-text:#3d5528;--header1:#3d5528;--header2:#4F6F3A;--header3:#5f8247}
+[data-theme="ash"]{--bg:#D9D9D9;--card:#ffffff;--card2:#f0f0f0;--text:#121A3A;--text2:#5a6480;--border:#c8c8c8;--accent:#121A3A;--accent-dark:#1e2a52;--accent-text:#D9D9D9;--header1:#121A3A;--header2:#1e2a52;--header3:#2a3a6a}
+[data-theme="choco"]{--bg:#2a1810;--card:#3d2418;--card2:#4a2e20;--text:#B2F2D8;--text2:#8ab8a0;--border:#5a3828;--accent:#B2F2D8;--accent-dark:#8ad4b0;--accent-text:#4E2A1E;--header1:#4E2A1E;--header2:#5f3520;--header3:#704028}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="purple"]{--bg:#1a0a2e;--card:#2d1250;--card2:#3d1a6a;--text:#FFD700;--text2:#c0a030;--border:#4a2080;--accent:#FFD700;--accent-dark:#e6c200;--accent-text:#6A0DAD;--header1:#6A0DAD;--header2:#7b1fa2;--header3:#8c27b0}
+[data-theme="navy"]{--bg:#1B263B;--card:#223050;--card2:#2a3a5a;--text:#F72585;--text2:#c04070;--border:#2a3a5a;--accent:#F72585;--accent-dark:#d01e70;--accent-text:#1B263B;--header1:#1B263B;--header2:#223050;--header3:#2a3a5a}
+[data-theme="electric"]{--bg:#0a0a2a;--card:#141440;--card2:#1e1e50;--text:#DFFF00;--text2:#a0b800;--border:#2a2a60;--accent:#DFFF00;--accent-dark:#b8d600;--accent-text:#0066FF;--header1:#0066FF;--header2:#1a7aff;--header3:#3388ff}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);padding-bottom:80px;-webkit-font-smoothing:antialiased;transition:all .3s}
+.header{background:linear-gradient(135deg,var(--header1),var(--header2),var(--header3));color:var(--accent);padding:16px;display:flex;justify-content:flex-start;align-items:center;gap:10px;position:sticky;top:0;z-index:10;box-shadow:0 4px 24px rgba(0,0,0,0.2)}
+.header-title{font-size:20px;font-weight:700;letter-spacing:-0.3px}
+.theme-btn{background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.2);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--accent);min-width:40px;text-align:center;width:auto}
+.theme-btn:active{transform:scale(0.9)}
+.theme-picker{position:fixed;top:60px;right:12px;left:12px;background:var(--card);border:2px solid var(--border);border-radius:16px;padding:12px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.3);display:none}
+.theme-picker.show{display:block}
+.theme-option{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;cursor:pointer;transition:background .2s;margin-bottom:6px}
+.theme-option:hover{background:var(--card2)}
+.theme-option.active{background:var(--card2);border:2px solid var(--accent)}
+.theme-preview{width:36px;height:36px;border-radius:10px;border:2px solid var(--border)}
+.theme-name{font-size:14px;font-weight:600;color:var(--text)}
+.content{padding:12px;max-width:600px;margin:0 auto}
+.card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 2px 16px rgba(0,0,0,0.15);border:1px solid var(--border);transition:transform .2s}
+.card h3{margin-bottom:12px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;color:var(--accent)}
+.form-label{font-size:11px;color:var(--text2);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
+input,textarea,select{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:12px;font-size:15px;margin-bottom:10px;background:var(--card2);color:var(--text);transition:all .2s;outline:none}
+input:focus,select:focus{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 4px rgba(0,229,255,0.12)}
+input::placeholder{color:var(--text2)}
+button{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--accent-text);border:none;padding:13px 20px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;width:100%;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+button:active{transform:scale(0.97)}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;border-top:1px solid var(--border);z-index:100;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}
+.tab{flex:1;text-align:center;padding:6px 2px;cursor:pointer;transition:all .2s;border-radius:12px;margin:0 2px;-webkit-tap-highlight-color:transparent}
+.tab:active{transform:scale(0.9)}
+.tab.active{background:var(--accent)}
+.tab .icon{font-size:20px;line-height:1}
+.tab .label{font-size:9px;margin-top:3px;font-weight:600;letter-spacing:0.2px;color:var(--text2)}
+.tab.active .label{color:var(--accent-text)}
+.stat-box{background:linear-gradient(135deg,var(--card2),var(--card));padding:14px 10px;border-radius:14px;text-align:center;border:1px solid var(--border)}
+.stat-box .num{font-size:22px;font-weight:800;line-height:1.2;color:var(--accent)}
+.stat-box .lbl{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+.progress-bar{background:var(--border);border-radius:10px;height:10px;overflow:hidden}
+.progress-fill{height:100%;border-radius:10px;transition:width .4s ease;background:linear-gradient(90deg,var(--accent),var(--accent-dark))}
+.filter-btn{flex:1;padding:8px 4px;font-size:11px;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;background:var(--card2);color:var(--text2)}
+.filter-btn:active{transform:scale(0.95)}
+.filter-btn.active{background:var(--accent);color:var(--accent-text)}
+.list-item{padding:12px 0;border-bottom:1px solid var(--border);transition:background .2s}
+.list-item:last-child{border-bottom:none}
+.badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:10px;font-weight:700}
+.hero-card{background:linear-gradient(135deg,var(--header1),var(--header2),var(--header3));color:var(--accent);padding:24px 20px;border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.2);position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:-50%;right:-20%;width:200px;height:200px;background:rgba(255,255,255,0.06);border-radius:50%}
+.hero-card::after{content:'';position:absolute;bottom:-30%;left:-10%;width:150px;height:150px;background:rgba(255,255,255,0.04);border-radius:50%}
+.notif-card{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:14px;position:relative;overflow:hidden;border-left:4px solid var(--accent)}
+</style></style></style></style></style></style>
+</head>
+<body>
+<div id="vk_auth_gate" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:99999;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px">
+  <div style="font-size:64px;margin-bottom:20px">&#128146;</div>
+  <h2 style="font-size:22px;margin-bottom:10px;color:#222">Colibri</h2>
+  <p style="font-size:15px;color:#666;margin-bottom:30px">Для входа требуется авторизация VK</p>
+  <button onclick="_vkLogin()" style="padding:14px 40px;background:#0077FF;color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:600;cursor:pointer">Войти через VK</button>
+</div>
+<div class="header">
+  <div class="header-title">Colibri</div>
+  <button class="theme-btn" onclick="toggleThemePicker()">&#127912;</button>
+</div>
+<div class="theme-picker" id="themePicker">
+  <div class="theme-option" onclick="setTheme('moss')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#4F6F3A,#00E5FF)"></div>
+    <div class="theme-name">&#127807; &#1052;&#1096;&#1080;&#1089;&#1090;&#1099;&#1081; + &#1062;&#1080;&#1072;&#1085;</div>
+  </div>
+  <div class="theme-option" onclick="setTheme('ash')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#D9D9D9,#121A3A)"></div>
+    <div class="theme-name">&#128148; &#1055;&#1077;&#1087;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; + &#1063;&#1077;&#1088;&#1085;&#1080;&#1083;&#1100;&#1085;&#1099;&#1081;</div>
+  </div>
+  <div class="theme-option" onclick="setTheme('choco')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#4E2A1E,#B2F2D8)"></div>
+    <div class="theme-name">&#127851; &#1064;&#1086;&#1082;&#1086;&#1083;&#1072;&#1076;&#1085;&#1099;&#1081; + &#1052;&#1077;&#1085;&#1090;&#1086;&#1083;&#1086;&#1074;&#1099;&#1081;</div>
+  </div>
+  
+  <div class="theme-option" onclick="setTheme('purple')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#6A0DAD,#FFD700)"></div>
+    <div class="theme-name">&#128156; Фиолетовый + Золотой</div>
+  </div>
+  <div class="theme-option" onclick="setTheme('navy')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#1B263B,#F72585)"></div>
+    <div class="theme-name">&#127754; Тёмно-синий + Малиновый</div>
+  </div>
+  
+  <div class="theme-option" onclick="setTheme('purple')">
+    <div class="theme-preview" style="background:linear-gradient(135deg,#6A0DAD,#FFD700)"></div>
+    <div class="theme-name">&#128156; Фиолетовый + Золотой</div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+<div class="content" id="content"></div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab(0)"><div class="icon">&#128146;</div><div class="label" id="lbl0">Свадьба</div></div>
+  <div class="tab" onclick="switchTab(1)"><div class="icon">&#128101;</div><div class="label" id="lbl1">Гости</div></div>
+  <div class="tab" onclick="switchTab(2)"><div class="icon">&#128176;</div><div class="label" id="lbl2">Бюджет</div></div>
+  <div class="tab" onclick="switchTab(3)"><div class="icon">&#127978;</div><div class="label" id="lbl3">Поставщики</div></div>
+  <div class="tab" onclick="switchTab(4)"><div class="icon">&#9989;</div><div class="label" id="lbl4">Задачи</div></div>
+  <div class="tab" onclick="switchTab(5)"><div class="icon">&#127869;</div><div class="label" id="lbl5">Рассадка</div></div>
+  <div class="tab" onclick="switchTab(6)"><div class="icon">&#9881;</div><div class="label" id="lbl6">Ещё</div></div>
+</div>
+
+
+<script>
+// VK Bridge - correct Android API
+(function(){
+  var h={},id=0;
+  function send(e,d){return new Promise(function(r,j){
+    var i=++id;
+    h[i]={r:r,j:j};
+    var params=JSON.stringify(d||{});
+    
+    // Android: call named method directly
+    if(window.AndroidBridge&&window.AndroidBridge[e]){
+      window.AndroidBridge[e](params);
+    }
+    // iOS webkit
+    else if(window.webkit&&window.webkit.messageHandlers){
+      var k=Object.keys(window.webkit.messageHandlers);
+      for(var n=0;n<k.length;n++)
+        window.webkit.messageHandlers[k[n]].postMessage(JSON.stringify({type:e,data:d||{},id:i}));
+    }
+    // iframe
+    else if(window.parent&&window.parent!==window){
+      window.parent.postMessage(JSON.stringify({type:e,data:d||{},id:i}),"*");
+    }
+    
+    setTimeout(function(){if(h[i]){h[i].r({result:true});delete h[i];}},3000);
+  });}
+  
+  // Android bridge sends events via document events
+  document.addEventListener("VKWebAppEvent",function(e){
+    var d=e.detail;
+    if(d&&d.data&&d.data.request_id&&h[d.data.request_id]){
+      h[d.data.request_id].r(d.data);
+      delete h[d.data.request_id];
+    }
+  });
+  
+  // Also listen for message events (iframe/ios)
+  window.addEventListener("message",function(e){
+    try{
+      var d=typeof e.data==="string"?JSON.parse(e.data):e.data;
+      if(d&&d.id&&h[d.id]){h[d.id].r(d.data||d);delete h[d.id];}
+    }catch(x){}
+  });
+  
+  window.vkBridge={send:send};
+  send("VKWebAppInit");
+})();
+
+
+// i18n system
+var LANG = load("lang") || "ru";
+var I18N = {
+  ru: {
+    wedding: "\u0421\u0432\u0430\u0434\u044c\u0431\u0430",
+    guests: "\u0413\u043e\u0441\u0442\u0438",
+    budget: "\u0411\u044e\u0434\u0436\u0435\u0442",
+    vendors: "\u041f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0438",
+    tasks: "\u0417\u0430\u0434\u0430\u0447\u0438",
+    seating: "\u0420\u0430\u0441\u0441\u0430\u0434\u043a\u0430",
+    more: "\u0415\u0449\u0451",
+    our_wedding: "\u041d\u0430\u0448\u0430 \u0441\u0432\u0430\u0434\u044c\u0431\u0430",
+    bride: "\u0418\u043c\u044f \u0436\u0435\u043d\u044b",
+    groom: "\u0418\u043c\u044f \u043c\u0443\u0436\u0430",
+    date: "\u0414\u0430\u0442\u0430 \u0441\u0432\u0430\u0434\u044c\u0431\u044b",
+    budget_label: "\u0411\u044e\u0434\u0436\u0435\u0442 (\u0440\u0443\u0431)",
+    place: "\u041c\u0435\u0441\u0442\u043e",
+    save: "\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c",
+    days_left: "\u0434\u043d\u0435\u0439 \u0434\u043e \u0441\u0432\u0430\u0434\u044c\u0431\u044b",
+    today: "\u0421\u0435\u0433\u043e\u0434\u043d\u044f \u0441\u0432\u0430\u0434\u044c\u0431\u0430!",
+    days_after: "\u0434\u043d\u0435\u0439 \u043f\u043e\u0441\u043b\u0435 \u0441\u0432\u0430\u0434\u044c\u0431\u044b",
+    checklist: "\u0427\u0435\u043a-\u043b\u0438\u0441\u0442 \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0438",
+    add: "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c",
+    all: "\u0412\u0441\u0435",
+    confirmed: "\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u043b",
+    waiting: "\u041e\u0436\u0438\u0434\u0430\u0435\u0442",
+    declined: "\u041e\u0442\u043a\u0430\u0437\u0430\u043b\u0441\u044f",
+    guest_name: "\u0418\u043c\u044f \u0433\u043e\u0441\u0442\u044f",
+    companion: "\u041a\u043e\u043c\u043f\u0430\u043d\u044c\u043e\u043d (+1)",
+    from_vk: "\u0418\u0437 VK",
+    spent: "\u041f\u043e\u0442\u0440\u0430\u0447\u0435\u043d\u043e",
+    category: "\u0421\u0442\u0430\u0442\u044c\u044f \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432",
+    amount: "\u0421\u0443\u043c\u043c\u0430",
+    total: "\u0412\u0441\u0435\u0433\u043e",
+    paid: "\u041e\u043f\u043b\u0430\u0447\u0435\u043d\u043e",
+    remaining: "\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c",
+    new_task: "\u041d\u043e\u0432\u0430\u044f \u0437\u0430\u0434\u0430\u0447\u0430",
+    deadline: "\u0414\u0435\u0434\u043b\u0430\u0439\u043d",
+    priority: "\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442",
+    high: "\u0412\u044b\u0441\u043e\u043a\u0438\u0439",
+    normal: "\u0421\u0440\u0435\u0434\u043d\u0438\u0439",
+    low: "\u041d\u0438\u0437\u043a\u0438\u0439",
+    notifications: "\u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f",
+    settings: "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
+    export: "\u042d\u043a\u0441\u043f\u043e\u0440\u0442",
+    import: "\u0418\u043c\u043f\u043e\u0440\u0442",
+    reset: "\u0421\u0431\u0440\u043e\u0441",
+    language: "\u042f\u0437\u044b\u043a",
+    theme: "\u0422\u0435\u043c\u0430",
+    add_table: "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0441\u0442\u043e\u043b",
+    no_seat: "\u0411\u0435\u0437 \u043c\u0435\u0441\u0442\u0430",
+    assign: "\u041d\u0430\u0437\u043d\u0430\u0447\u0438\u0442\u044c"
+  },
+  en: {
+    wedding: "Wedding",
+    guests: "Guests",
+    budget: "Budget",
+    vendors: "Vendors",
+    tasks: "Tasks",
+    seating: "Seating",
+    more: "More",
+    our_wedding: "Our Wedding",
+    bride: "Bride name",
+    groom: "Groom name",
+    date: "Wedding date",
+    budget_label: "Budget (RUB)",
+    place: "Venue",
+    save: "Save",
+    days_left: "days until wedding",
+    today: "Today is the wedding!",
+    days_after: "days after wedding",
+    checklist: "Preparation Checklist",
+    add: "Add",
+    all: "All",
+    confirmed: "Confirmed",
+    waiting: "Pending",
+    declined: "Declined",
+    guest_name: "Guest name",
+    companion: "Companion (+1)",
+    from_vk: "From VK",
+    spent: "Spent",
+    category: "Expense category",
+    amount: "Amount",
+    total: "Total",
+    paid: "Paid",
+    remaining: "Remaining",
+    new_task: "New task",
+    deadline: "Deadline",
+    priority: "Priority",
+    high: "High",
+    normal: "Medium",
+    low: "Low",
+    notifications: "Notifications",
+    settings: "Settings",
+    export: "Export",
+    import: "Import",
+    reset: "Reset",
+    language: "Language",
+    theme: "Theme",
+    add_table: "Add table",
+    no_seat: "No seat",
+    assign: "Assign"
+  }
+};
+
+function t(key) {
+  return (I18N[LANG] && I18N[LANG][key]) || (I18N.ru[key]) || key;
+}
+
+function setLang(lang) {
+  LANG = lang;
+  save("lang", lang);
+  updateLabels();
+
+render();startCountdown();
+}
+
+// Data
+// STORAGE: VK Bridge primary, localStorage fallback
+var _vks = {};       // VK Storage cache
+var _vkReady = false; // VK Storage loaded
+var _vkAvailable = false;
+
+// Инициализация VK Storage
+// ===== PARTNER SYNC =====
+var API_BASE = "https://app.nevessta.ru/api";
+var _syncCode = load("couple_code") || null;
+var _syncUserId = load("sync_user_id") || null;
+var _syncTimer = null;
+
+// Получение user_id из VK
+function _getVKUserId() {
+  // 1. vk_user_id из URL (VK Mini App передаёт автоматически)
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var vkId = params.get("vk_user_id");
+    if (vkId && vkId !== "0") return Promise.resolve(parseInt(vkId));
+  } catch(e) {}
+  // 2. Из VK Bridge
+  if (window.vkBridge) {
+    return vkBridge.send("VKWebAppGetUserInfo").then(function(r) {
+      return r.id || 0;
+    }).catch(function() { return 0; });
+  }
+  // 3. Браузер без VK — постоянный device ID
+  var devId = localStorage.getItem("colibri_device_id");
+  if (!devId) {
+    devId = "dev_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);
+    localStorage.setItem("colibri_device_id", devId);
+  }
+  return Promise.resolve(devId);
+}
+
+// Создать пару
+function createCouple() {
+  _getVKUserId().then(function(uid) {
+    var data = _getAllData();
+    fetch(API_BASE + "/couple", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({user_id: uid, name: load("wedding")?.bride || load("wedding")?.groom || "User", role: document.getElementById("my_role")?.value || "bride", data: data})
+    }).then(function(r) { return r.json(); }).then(function(res) {
+      if (res.code) {
+        _syncCode = res.code;
+        _syncUserId = uid;
+        save("couple_code", _syncCode);
+        save("sync_user_id", uid);
+        _startSync();
+        render();
+      }
+    }).catch(function(e) { console.log("Create couple error:", e); });
+  });
+}
+
+// Присоединиться к паре
+function joinCouple() {
+  var input = document.getElementById("couple_code_input");
+  if (!input || !input.value.trim()) return;
+  var code = input.value.trim().toUpperCase();
+  _getVKUserId().then(function(uid) {
+    fetch(API_BASE + "/couple/" + code + "/join", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({user_id: uid, name: load("wedding")?.bride || load("wedding")?.groom || "User", role: document.getElementById("join_role")?.value || "guest"})
+    }).then(function(r) { return r.json(); }).then(function(res) {
+      if (res.members) save("sync_members", res.members);
+      if (res.members) save("sync_members", res.members);
+      if (res.data) {
+        _syncCode = code;
+        _syncUserId = uid;
+        save("couple_code", code);
+        save("sync_user_id", uid);
+        _loadFromServer(res.data);
+        _startSync();
+        render();
+      }
+    }).catch(function(e) { console.log("Join couple error:", e); });
+  });
+}
+
+// Получить все данные
+function _getAllData() {
+  return {
+    _ts: Date.now(),
+    _uid: _syncUserId,
+    wedding: load("wedding"),
+    guests: load("guests"),
+    budget: load("budget"),
+    tasks: load("tasks"),
+    vendors: load("vendors"),
+    tables: load("tables")
+  };
+}
+
+// Загрузить данные с сервера
+function _loadFromServer(data) {
+  // Сервер = источник правды. НЕ перезаписываем непустые локальные данные пустыми с сервера.
+  function shouldLoad(serverVal, localVal) {
+    if (serverVal === null || serverVal === undefined) return false;
+    // Пустой массив/объект не перезаписывает непустые локальные данные
+    var serverEmpty = (Array.isArray(serverVal) && serverVal.length === 0) || (typeof serverVal === "object" && !Array.isArray(serverVal) && Object.keys(serverVal).length === 0);
+    var localHasData = localVal !== null && localVal !== undefined && !(Array.isArray(localVal) && localVal.length === 0);
+    if (serverEmpty && localHasData) return false;
+    return true;
+  }
+  var keys = ["wedding", "guests", "budget", "tasks", "vendors", "tables"];
+  keys.forEach(function(k) {
+    if (shouldLoad(data[k], load(k))) save(k, data[k]);
+  });
+}
+
+// Сохранить на сервер
+function _pushToServer() {
+  if (!_syncCode) return;
+  var data = _getAllData();
+  // ЗАЩИТА: не отправляем пустые данные (перезаписали бы сервер)
+  if (!data.wedding && (!data.guests || data.guests.length === 0)) return;
+  fetch(API_BASE + "/couple/" + _syncCode, {
+    method: "PUT",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({user_id: _syncUserId, data: data})
+  }).catch(function(e) { console.log("Push error:", e); });
+}
+
+// Получить с сервера
+function _pullFromServer(cb) {
+  if (!_syncCode) { if (cb) cb(); return; }
+  fetch(API_BASE + "/couple/" + _syncCode + "?user_id=" + _syncUserId)
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (res.members) save("sync_members", res.members);
+      if (res.members) save("sync_members", res.members);
+      if (res.data) {
+        _loadFromServer(res.data);
+        if (cb) cb();
+      }
+    })
+    .catch(function(e) { console.log("Pull error:", e); if (cb) cb(); });
+}
+
+// Запуск синхронизации
+function _startSync() {
+  if (_syncTimer) clearInterval(_syncTimer);
+  _syncTimer = setInterval(function() {
+    _pullFromServer(function() {
+      render();
+    });
+    _pushToServer();
+  }, 30000);
+}
+
+// Отключить синхронизацию
+function disconnectCouple() {
+  _syncCode = null;
+  _syncUserId = null;
+  save("couple_code", null);
+  save("sync_user_id", null);
+  if (_syncTimer) clearInterval(_syncTimer);
+  render();
+}
+
+// UI для настроек партнёра
+// UI for partner settings with roles
+function renderPartnerSection() {
+  var h = "";
+  h += "<div class='card'><h3>&#129309; Совместное планирование</h3>";
+  if (_syncCode) {
+    // Role dropdown - ABOVE code
+    h += "<div style='margin-bottom:12px'>";
+    h += "<div style='font-size:12px;opacity:.7;margin-bottom:8px'>Роль приглашаемого</div>";
+    h += "<select id='invite_role' style='width:100%;padding:10px;border-radius:8px;background:var(--card2);color:var(--text);border:1px solid var(--border)'>";
+    h += "<option value='groom'>&#128150; Жених</option>";
+    h += "<option value='bride'>&#128149; Невеста</option>";
+    h += "<option value='organizer'>&#127919; Организатор</option>";
+    h += "<option value='planner'>&#128218; Координатор</option>";
+    h += "<option value='family'>&#128106; Семья</option>";
+    h += "<option value='guest'>&#128100; Гость</option>";
+    h += "</select>";
+    h += "</div>";
+    
+    // Couple code
+    h += "<div style='background:var(--card2);border-radius:12px;padding:12px;margin-bottom:12px'>";
+    h += "<div style='font-size:12px;opacity:.7'>Код пары</div>";
+    h += "<div style='font-size:24px;font-weight:700;letter-spacing:3px;text-align:center'>" + _syncCode + "</div>";
+    h += "</div>";
+    
+    // Members list
+    var members = load("sync_members") || [];
+    if (members.length > 0) {
+      h += "<div style='margin-bottom:12px'>";
+      h += "<div style='font-size:12px;opacity:.7;margin-bottom:8px'>Участники</div>";
+      members.forEach(function(m) {
+        var roleIcon = {bride: "&#128149;", groom: "&#128150;", organizer: "&#127919;", family: "&#128106;", guest: "&#128100;", planner: "&#128218;"}[m.role] || "&#128100;";
+        var roleName = {bride: "Невеста", groom: "Жених", organizer: "Организатор", family: "Семья", guest: "Гость", planner: "Координатор"}[m.role] || "Гость";
+        h += "<div style='display:flex;align-items:center;gap:8px;padding:8px;background:var(--card2);border-radius:8px;margin-bottom:4px'>";
+        h += "<span style='font-size:20px'>" + roleIcon + "</span>";
+        h += "<div style='flex:1'>";
+        h += "<div style='font-weight:600'>" + (m.name || "User " + m.user_id) + "</div>";
+        h += "<div style='font-size:11px;opacity:.6'>" + roleName + "</div>";
+        h += "</div>";
+        h += "</div>";
+      });
+      h += "</div>";
+    }
+    
+    // QR Code
+    var inviteRole=document.getElementById("invite_role")?document.getElementById("invite_role").value:"guest";
+    var inviteUrl="https://vk.com/app54816577?join="+_syncCode+"&role="+inviteRole;
+    var shareUrl="https://vk.com/app54816577?join="+_syncCode+"&role="+inviteRole;
+    var qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="+encodeURIComponent("https://vk.com/app54816577?join="+_syncCode);
+    
+    h += "<div style='margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center'>";
+    h += "<div style='font-size:12px;color:var(--text2);margin-bottom:8px'>QR-код приглашения</div>";
+    h += "<img src='"+qrUrl+"' style='width:160px;height:160px;border-radius:8px' alt='QR Code'>";
+    h += "<div style='font-size:11px;color:var(--text2);margin-top:6px'>Наведите камеру для присоединения</div>";
+    h += "<div style='font-size:10px;color:var(--text2);margin-top:4px;opacity:.7'>Ссылка откроется в приложении VK</div>";
+    h += "</div>";
+    
+    // Link
+    h += "<div style='margin-top:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px'>";
+    h += "<div style='font-size:12px;color:var(--text2);margin-bottom:6px'>Ссылка-приглашение</div>";
+    h += "<div style='display:flex;gap:8px;align-items:center'>";
+    h += "<input id='invite_link' value='"+inviteUrl+"' readonly style='flex:1;padding:8px;font-size:11px;background:var(--card2);border:1px solid var(--border);border-radius:6px;color:var(--text)'>";
+    h += "<button onclick='copyInviteLink()' style='padding:8px 12px;background:var(--accent);color:var(--accent-text);border:none;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap'>&#128203; Копировать</button>";
+    h += "</div></div>";
+    h += "</div>";
+    
+    h += "<button onclick='shareInvite()' style='width:100%;background:var(--accent);color:var(--accent-text);border-radius:12px;padding:12px;font-size:15px;font-weight:700;border:none;cursor:pointer;margin-top:12px'>&#128228; Отправить приглашение</button>";
+    h += "<button onclick='disconnectCouple()' style='width:100%;background:#e74c3c;color:#fff;border-radius:12px;padding:12px;font-size:15px;border:none;cursor:pointer;margin-top:8px'>Отключить</button>";
+    h += "<div style='font-size:12px;opacity:.5;text-align:center;margin-top:8px'>Автосинхрон 30 сек</div>";
+  } else {
+    // Block 1: Create wedding
+    h += "<div style='background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px'>";
+    h += "<div style='font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text)'>&#128146; Создать свадьбу</div>";
+    h += "<div style='font-size:12px;opacity:.7;margin-bottom:8px'>Ваша роль</div>";
+    h += "<select id='my_role' style='width:100%;padding:10px;border-radius:8px;background:var(--card);color:var(--text);border:1px solid var(--border)'>";
+    h += "<option value='groom'>&#128150; Жених</option>";
+    h += "<option value='bride'>&#128149; Невеста</option>";
+    h += "<option value='organizer'>&#127919; Организатор</option>";
+    h += "<option value='planner'>&#128218; Координатор</option>";
+    h += "<option value='family'>&#128106; Семья</option>";
+    h += "<option value='guest'>&#128100; Гость</option>";
+    h += "</select>";
+    h += "<button onclick='createCouple()' style='width:100%;background:var(--accent);color:var(--accent-text);border-radius:10px;padding:12px;font-size:14px;font-weight:700;border:none;cursor:pointer;margin-top:10px'>Создать</button>";
+    h += "</div>";
+    
+    // Block 2: Join wedding
+    h += "<div style='background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px'>";
+    h += "<div style='font-size:14px;font-weight:600;margin-bottom:10px;color:var(--text)'>&#129309; Присоединиться</div>";
+    h += "<input id='couple_code_input' placeholder='Введите код' maxlength='8' style='width:100%;text-align:center;font-size:20px;letter-spacing:3px;text-transform:uppercase'>";
+    h += "<div style='margin-top:8px'>";
+    h += "<select id='join_role' style='width:100%;padding:10px;border-radius:8px;background:var(--card);color:var(--text);border:1px solid var(--border)'>";
+    h += "<option value='groom'>&#128150; Жених</option>";
+    h += "<option value='bride'>&#128149; Невеста</option>";
+    h += "<option value='organizer'>&#127919; Организатор</option>";
+    h += "<option value='planner'>&#128218; Координатор</option>";
+    h += "<option value='family'>&#128106; Семья</option>";
+    h += "<option value='guest'>&#128100; Гость</option>";
+    h += "</select>";
+    h += "</div>";
+    h += "<button onclick='joinCouple()' style='width:100%;background:var(--accent);color:var(--accent-text);border-radius:10px;padding:12px;font-size:14px;font-weight:700;border:none;cursor:pointer;margin-top:10px'>Присоединиться</button>";
+    h += "</div>";
+  }
+  h += "</div>";
+  return h;
+}
+
+function _autoJoin(code, role) {
+  _getVKUserId().then(function(uid) {
+    fetch(API_BASE + "/couple/" + code + "/join", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({user_id: uid, name: "User", role: role})
+    }).then(function(r) { return r.json(); }).then(function(res) {
+      if (res.data) {
+        _syncCode = code;
+        _syncUserId = uid;
+        save("couple_code", code);
+        save("sync_user_id", uid);
+        if (res.members) save("sync_members", res.members);
+        _loadFromServer(res.data);
+        _startSync();
+        render();
+      }
+    });
+  });
+}
+
+// Share invite link
+function copyInviteLink(){
+  var input=document.getElementById("invite_link");
+  if(!input)return;
+  var text=input.value;
+  
+  function showCopied(){
+    input.style.background="rgba(39,174,96,0.3)";
+    var btn=input.parentNode.querySelector("button");
+    if(btn){var old=btn.innerHTML;btn.innerHTML="&#10003; Скопировано";setTimeout(function(){btn.innerHTML=old;input.style.background="var(--card2)"},1500);}
+  }
+  
+  // Try modern clipboard API first
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(showCopied).catch(function(){
+      // Fallback: textarea
+      var ta=document.createElement("textarea");
+      ta.value=text;
+      ta.style.position="fixed";
+      ta.style.left="-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try{document.execCommand("copy");showCopied();}catch(e){}
+      document.body.removeChild(ta);
+    });
+  }else{
+    // Fallback: textarea
+    var ta=document.createElement("textarea");
+    ta.value=text;
+    ta.style.position="fixed";
+    ta.style.left="-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try{document.execCommand("copy");showCopied();}catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+
+function shareInvite() {
+  var role = document.getElementById("invite_role") ? document.getElementById("invite_role").value : "guest";
+  var inviteUrl = "https://vk.com/app54816577?join=" + _syncCode + "&role=" + role;
+  
+  function showFeedback(msg) {
+    var btns = document.querySelectorAll("button");
+    for(var i=0; i<btns.length; i++) {
+      if(btns[i].textContent.includes("Отправить приглашение")) {
+        var old = btns[i].innerHTML;
+        btns[i].innerHTML = msg;
+        setTimeout(function(){ btns[i].innerHTML = old; }, 2000);
+        break;
+      }
+    }
+  }
+  
+  function fallbackCopy() {
+    var ta = document.createElement("textarea");
+    ta.value = inviteUrl;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      showFeedback("&#10003; Ссылка скопирована!");
+    } catch(e) {
+      showFeedback("&#9888; Скопируйте вручную");
+    }
+    document.body.removeChild(ta);
+  }
+  
+  if (window.vkBridge) {
+    vkBridge.send("VKWebAppShare", {link: inviteUrl}).then(function() {
+      showFeedback("&#10003; Отправлено!");
+    }).catch(function(e) {
+      console.log("Share failed:", e);
+      fallbackCopy();
+    });
+  } else {
+    fallbackCopy();
+  }
+}
+
+function copyToClipboard(text) {
+  var ta = document.createElement("textarea");
+  ta.value = text;
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand("copy");
+  document.body.removeChild(ta);
+  console.log("Copied!");
+}
+
+// CHUNKED VK STORAGE SAVE — VKWebAppStorageSet лимит ~2236 байт (issue #226)
+// Большие данные режем на части: colibri_X_0, colibri_X_1, ...
+var _VK_CHUNK = 2000; // безопасный размер чанка (байт)
+
+function _vksSaveChunked(k, json) {
+  if (!window.vkBridge) return;
+  if (json.length <= _VK_CHUNK) {
+    // Маленькие данные — обычный ключ, удаляем чанки
+    vkBridge.send("VKWebAppStorageSet", {key: k, value: json}).catch(function(){});
+    for (var i = 0; i < 30; i++) {
+      (function(idx){ setTimeout(function(){ vkBridge.send("VKWebAppStorageSet", {key: k + "_" + idx, value: ""}).catch(function(){}); }, 500); })(i);
+    }
+  } else {
+    // Большие — чанкуем СНАЧАЛА пишем данные, ПОТОМ чистим лишнее
+    var parts = Math.ceil(json.length / _VK_CHUNK);
+    vkBridge.send("VKWebAppStorageSet", {key: k, value: "CHUNKED:" + parts}).catch(function(){});
+    for (var i = 0; i < parts; i++) {
+      vkBridge.send("VKWebAppStorageSet", {key: k + "_" + i, value: json.substring(i * _VK_CHUNK, (i + 1) * _VK_CHUNK)}).catch(function(){});
+    }
+    // Чистим ТОЛЬКО лишние старые чанки (позже частей)
+    for (var i = parts; i < 30; i++) {
+      (function(idx){ setTimeout(function(){ vkBridge.send("VKWebAppStorageSet", {key: k + "_" + idx, value: ""}).catch(function(){}); }, 500); })(i);
+    }
+  }
+}
+
+var _pendingPush = false;
+function save(key, val) {
+  var k = "colibri_" + key;
+  var json = JSON.stringify(val);
+  if (typeof _vks !== "undefined") { _vks[k] = val; }
+  try { localStorage.setItem(k, json); } catch(e) {}
+  if (typeof _vkAvailable !== "undefined" && _vkAvailable && typeof _vkReady !== "undefined" && _vkReady && window.vkBridge) {
+    _vksSaveChunked(k, json);
+  }
+  // ВСЕГДА отправляем на сервер напрямую (без _syncCode!)
+  _directSave(key, val);
+  if (typeof _syncCode !== "undefined" && _syncCode) {
+    _pushToServer();
+  } else {
+    _pendingPush = true;
+  }
+}
+
+// ПРЯМОЕ сохранение на сервер — без couple_code, без условий
+function _directSave(key, val) {
+  var uid = (typeof _syncUserId !== "undefined" && _syncUserId !== null) ? _syncUserId : 0;
+  // Если uid ещё не определился — читаем из URL
+  if (uid === 0 || uid === null) {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      var vid = p.get("vk_user_id");
+      if (vid && vid !== "0") { uid = parseInt(vid); _syncUserId = uid; }
+    } catch(e) {}
+  }
+  var _payload = _getAllData();
+  // ЗАЩИТА: не отправляем пустые данные
+  if (!_payload.wedding && (!_payload.guests || _payload.guests.length === 0)) return;
+  fetch(API_BASE + "/user-data", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({user_id: uid, payload: _payload})
+  }).catch(function(){});
+}
+
+function _initStorage(cb) {
+  if (!window.vkBridge) {
+    _vkAvailable = false;
+    _vkReady = true;
+    _migrateToVK();
+    if (cb) cb();
+    return;
+  }
+  _vkAvailable = true;
+  vkBridge.send("VKWebAppStorageGetKeys", {count: 100, offset: 0}).then(function(r) {
+    var keys = r.keys || [];
+    if (keys.length === 0) {
+      _vkReady = true;
+      _migrateToVK();
+      if (cb) cb();
+      return;
+    }
+    var promises = keys.map(function(k) {
+      return vkBridge.send("VKWebAppStorageGet", {key: k}).then(function(res) {
+        return {key: k, value: res.value};
+      });
+    });
+    return Promise.all(promises);
+  }).then(function(items) {
+    if (items) {
+      items.forEach(function(item) {
+        try { _vks[item.key] = JSON.parse(item.value); } catch(e) { _vks[item.key] = item.value; }
+      });
+    }
+    // СОБИРАЕМ ЧАНКИ: colibri_X_0 + colibri_X_1 -> colibri_X
+    Object.keys(_vks).forEach(function(k) {
+      if (k.match(/_\d+$/) && _vks[k + "_0"] !== undefined) {
+        // Это первый чанк — собираем
+        return;
+      }
+    });
+    // Ищем все базовые ключи с чанками
+    var chunkBases = {};
+    Object.keys(_vks).forEach(function(k) {
+      var m = k.match(/^(.+?)_(\d+)$/);
+      if (m && _vks[k] !== undefined && String(_vks[k]).length > 0 && String(_vks[k]).indexOf("CHUNKED:") !== 0) {
+        var base = m[1];
+        if (!chunkBases[base]) chunkBases[base] = [];
+        chunkBases[base].push({idx: parseInt(m[2]), val: _vks[k]});
+      }
+    });
+    Object.keys(chunkBases).forEach(function(base) {
+      if (chunkBases[base].length === 0) return;
+      // Собираем ТОЛЬКО если базовый ключ имеет маркер CHUNKED (не трогаем обычные данные)
+      if (_vks[base] !== undefined && String(_vks[base]).indexOf("CHUNKED:") === 0) {
+        chunkBases[base].sort(function(a, b) { return a.idx - b.idx; });
+        var joined = chunkBases[base].map(function(c) { return c.val; }).join("");
+        try { _vks[base] = JSON.parse(joined); } catch(e) { _vks[base] = joined; }
+      }
+    });
+    _vkReady = true;
+    _migrateToVK();
+    if (cb) cb();
+  }).catch(function(e) {
+    console.log("VK Storage error:", e);
+    _vkReady = true;
+    if (cb) cb();
+  });
+}
+
+// Миграция localStorage -> VK Storage (при первом запуске)
+function _migrateToVK() {
+  if (!_vkAvailable || !_vkReady) return;
+  var migrated = false;
+  var prefixes = ["colibri_wedding", "colibri_guests", "colibri_budget", "colibri_tasks", "colibri_vendors", "colibri_tables", "colibri_lang", "colibri_theme"];
+  prefixes.forEach(function(k) {
+    var lsVal = localStorage.getItem(k);
+    if (lsVal && _vks[k] === undefined) {
+      try {
+        var parsed = JSON.parse(lsVal);
+        _vks[k] = parsed;
+        vkBridge.send("VKWebAppStorageSet", {key: k, value: lsVal}).catch(function(){});
+        migrated = true;
+      } catch(e) {
+        _vks[k] = lsVal;
+        vkBridge.send("VKWebAppStorageSet", {key: k, value: JSON.stringify(lsVal)}).catch(function(){});
+        migrated = true;
+      }
+    }
+  });
+  if (migrated) console.log("Data migrated to VK Storage");
+}
+
+// LOAD: VK Storage -> localStorage fallback
+function load(key) {
+  var k = "colibri_" + key;
+  // VK Storage (приоритет) — проверяем чанки
+  if (_vkReady && _vkAvailable) {
+    if (_vks[k] !== undefined) {
+      // Если значение — маркер чанков, собираем
+      if (_vks[k] === "CHUNKED:" + Object.keys(_vks).filter(function(x){return x.indexOf(k+"_")===0}).length) {
+        // Собираем из чанков
+        var parts = [];
+        for (var i = 0; i < 50; i++) {
+          if (_vks[k + "_" + i] !== undefined) parts.push(_vks[k + "_" + i]);
+          else break;
+        }
+        if (parts.length > 0) {
+          try { return JSON.parse(parts.join("")); } catch(e) {}
+        }
+      }
+      if (_vks[k] !== null && _vks[k] !== undefined && String(_vks[k]).indexOf("CHUNKED:") !== 0) {
+        return _vks[k];
+      }
+    }
+    // Собираем чанки по маркеру или по наличию
+    if (_vks[k + "_0"] !== undefined) {
+      var parts = [];
+      for (var i = 0; i < 50; i++) {
+        if (_vks[k + "_" + i] !== undefined && String(_vks[k + "_" + i]).length > 0) parts.push(_vks[k + "_" + i]);
+        else break;
+      }
+      if (parts.length > 0) {
+        try { return JSON.parse(parts.join("")); } catch(e) {}
+      }
+    }
+  }
+  // localStorage fallback
+  try { return JSON.parse(localStorage.getItem(k)) || null; } catch(e) { return null; }
+}
+
+// SAVE: одновременно в VK Storage + localStorage
+
+// Полная синхронизация всех данных в VK Storage
+function syncToVK() {
+  if (!_vkAvailable || !_vkReady) return;
+  var keys = ["wedding", "guests", "budget", "tasks", "vendors", "tables", "lang", "theme"];
+  keys.forEach(function(key) {
+    var data = load(key);
+    if (data !== null && data !== undefined) {
+      save(key, data);
+    }
+  });
+}
+
+// Экспорт всех данных
+function exportAllData() {
+  var data = {};
+  var keys = ["wedding", "guests", "budget", "tasks", "vendors", "tables"];
+  keys.forEach(function(k) {
+    var d = load(k);
+    if (d) data[k] = d;
+  });
+  return JSON.stringify(data, null, 2);
+}
+
+function _autoRestoreServer(cb) {
+  // СЕРВЕР = ИСТОЧНИК ПРАВДЫ. Автоматически создаём/восстанавливаем личное пространство.
+  function done() { render(); if (cb) cb(); }
+  // Восстанавливаем из localStorage если есть
+  if (!_syncCode) { try { _syncCode = JSON.parse(localStorage.getItem("colibri_couple_code")); } catch(e) {} }
+  if (!_syncUserId && _syncUserId !== 0) { try { _syncUserId = JSON.parse(localStorage.getItem("colibri_sync_user_id")); } catch(e) {} }
+  if (_syncCode && _syncUserId !== null && _syncUserId !== undefined) {
+    // Уже есть пара — подтягиваем данные
+    _pullFromServer(function() { done(); });
+    return;
+  }
+  // Получаем VK user_id и создаём/восстанавливаем пару
+  _getVKUserId().then(function(uid) {
+    if (uid === null || uid === undefined) return;
+    _syncUserId = uid;
+    return fetch(API_BASE + "/couple", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({user_id: uid, name: "User", role: "bride", data: _getAllData()})
+    });
+  }).then(function(r) {
+    if (!r) return null;
+    return r.json();
+  }).then(function(res) {
+    if (res && res.code) {
+      _syncCode = res.code;
+      save("couple_code", _syncCode);
+      save("sync_user_id", _syncUserId);
+      // Если сервер вернул данные (восстановление) — загружаем
+      if (res.status === "existing" && res.data) {
+        _loadFromServer(res.data);
+      }
+      if (res.members) save("sync_members", res.members);
+      _startSync();
+      if (_pendingPush) { _pendingPush = false; _pushToServer(); }
+      done();
+    }
+  }).catch(function(e) {
+    console.log("Auto-restore error:", e);
+    done();
+  });
+}
+
+// АВТОРИЗАЦИЯ VK — БЛОКИРОВКА до входа
+var _vkAuthed = false;
+
+function _vkLogin() {
+  var gate = document.getElementById("vk_auth_gate");
+  if (!window.vkBridge) {
+    // Браузер без VK — показываем кнопку VK Login через OAuth
+    window.location.href = "https://oauth.vk.com/authorize?client_id=54816577&display=mobile&redirect_uri=" + encodeURIComponent(window.location.href.split("#")[0]) + "&scope=friends&response_type=token&v=5.199";
+    return;
+  }
+  // VK Mini App — запрашиваем токен
+  vkBridge.send("VKWebAppGetAuthToken", {app_id: 54816577, scope: "friends"}).then(function(res) {
+    if (res && res.response && res.response.access_token) {
+      window._vkToken = res.response.access_token;
+      _vkAuthed = true;
+      localStorage.setItem("colibri_vk_authed", "1");
+      gate.style.display = "none";
+      document.body.classList.remove("vk-locked");
+    }
+  }).catch(function(e) {
+    console.log("VK Login error:", e);
+  });
+}
+
+function _vkCheckAuth(cb) {
+  // Проверяем: авторизован ли пользователь
+  var saved = localStorage.getItem("colibri_vk_authed");
+  if (saved === "1" && window._vkToken) {
+    _vkAuthed = true;
+    if (cb) cb(true);
+    return;
+  }
+  if (!window.vkBridge) {
+    // Браузер — проверяем токен из URL hash (#access_token=...)
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+      var hp = new URLSearchParams(hash);
+      var at = hp.get("access_token");
+      if (at) {
+        window._vkToken = at;
+        _vkAuthed = true;
+        localStorage.setItem("colibri_vk_authed", "1");
+        localStorage.setItem("colibri_vk_token", at);
+        // Убираем hash из URL
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        if (cb) cb(true);
+        return;
+      }
+    }
+    // Проверяем сохранённый токен
+    var savedToken = localStorage.getItem("colibri_vk_token");
+    if (savedToken) {
+      window._vkToken = savedToken;
+      _vkAuthed = true;
+      if (cb) cb(true);
+      return;
+    }
+    if (cb) cb(false);
+    return;
+  }
+  // VK Mini App — пробуем получить токен молча, с таймаутом
+  var _authDone = false;
+  function _authCb(ok) { if (_authDone) return; _authDone = true; if (cb) cb(ok); }
+  setTimeout(function() { _authCb(true); }, 3000); // Timeout: пускаем без токена
+  vkBridge.send("VKWebAppGetAuthToken", {app_id: 54816577, scope: "friends"}).then(function(res) {
+    if (res && res.response && res.response.access_token) {
+      window._vkToken = res.response.access_token;
+      _vkAuthed = true;
+      localStorage.setItem("colibri_vk_authed", "1");
+    }
+    _authCb(true);
+  }).catch(function() { _authCb(true); });
+}
+
+_initStorage(function() {
+  // ПРОВЕРКА АВТОРИЗАЦИИ VK — блокировка приложения
+  _vkCheckAuth(function(isAuthed) {
+  if (!isAuthed) {
+    // Показываем экран авторизации
+    document.getElementById("vk_auth_gate").style.display = "flex";
+    document.body.classList.add("vk-locked");
+    return;
+  }
+  // Авторизован — показываем приложение
+  document.getElementById("vk_auth_gate").style.display = "none";
+  document.body.classList.remove("vk-locked");
+  // СНАЧАЛА пробуем прямую загрузку с сервера
+  var _directUid = 0;
+  try {
+    var _vp = new URLSearchParams(window.location.search);
+    var _vid = _vp.get("vk_user_id");
+    if (_vid && _vid !== "0") _directUid = parseInt(_vid);
+    else { var _tmp = localStorage.getItem("colibri_sync_user_id"); if (_tmp) _directUid = _tmp; }
+  } catch(e) {}
+  fetch(API_BASE + "/user-data/" + _directUid).then(function(r){ return r.json(); }).then(function(res) {
+    if (res && res.ok && res.data) {
+      _loadFromServer(res.data);
+      console.log("Direct restore OK from server");
+    }
+    _startApp();
+  }).catch(function(){ _startApp(); });
+
+  function _startApp() {
+  // АВТОВОССТАНОВЛЕНИЕ с сервера — ЖДЁМ завершения перед рендером!
+  _autoRestoreServer(function() {
+    var params = new URLSearchParams(window.location.search);
+    var joinCode = params.get("join");
+    if (joinCode && !_syncCode) { setTimeout(function() { _autoJoin(joinCode, params.get("role") || "guest"); }, 1000); }
+    if(_syncCode)_startSync();
+    render();
+    console.log("Storage ready. VK:", _vkAvailable, "Data loaded:", Object.keys(_vks).length);
+  });
+  }
+  });
+});
+
+// Wedding data
+function getWedding(){return load("wedding")||{date:"",budget:"",place:"",bride:"",groom:""}}
+function saveWedding(w){save("wedding",w)}
+
+// Tabs
+var currentTab=0;
+
+function updateLabels(){
+  var keys=['wedding','guests','budget','vendors','tasks','seating','more'];
+  for(var i=0;i<keys.length;i++){
+    var el=document.getElementById('lbl'+i);
+    if(el)el.textContent=t(keys[i]);
+  }
+}
+
+function switchTab(i){
+  currentTab=i;
+  var tabs=document.querySelectorAll(".tab");
+  tabs.forEach(function(t,j){t.className="tab"+(j===i?" active":"")});
+  render();
+}
+
+  
+function toggleThemePicker(){
+  var p=document.getElementById("themePicker");
+  p.classList.toggle("show");
+}
+function setTheme(name){
+  document.documentElement.setAttribute("data-theme",name);
+  localStorage.setItem("colibri_theme",name);
+  document.getElementById("themePicker").classList.remove("show");
+}
+(function(){
+  var saved=load("theme")||"moss";
+  document.documentElement.setAttribute("data-theme",saved);
+})();
+document.addEventListener("click",function(e){
+  var p=document.getElementById("themePicker");
+  var btn=document.querySelector(".theme-btn");
+  if(p&&p.classList.contains("show")&&!p.contains(e.target)&&e.target!==btn){
+    p.classList.remove("show");
+  }
+});
+
+
+
+function render(){
+  var c=document.getElementById("content");
+  if(currentTab===0) renderWedding(c);
+  else if(currentTab===1) renderGuests(c);
+  else if(currentTab===2) renderBudget(c);
+  else if(currentTab===3) renderVendors(c);
+  else if(currentTab===4) renderTasks(c);
+  else if(currentTab===5) renderSeating(c);
+  else renderSettings(c);
+}
+
+function renderWedding(c){
+  var w=getWedding();
+  var checklist=load("tasks")||[];
+  
+  var done=checklist.filter(function(i){return i.done}).length;
+  var total=checklist.length;
+  var pct=total>0?Math.round(done/total*100):0;
+  
+  c.innerHTML=showNotifications()+
+  '<div style="position:relative;background:linear-gradient(135deg,#FFF5EE,#FFE4D6,#FFDAB9,#FFE8D6);border-radius:20px;overflow:hidden;padding:24px 16px;text-align:center;box-shadow:0 8px 30px rgba(210,105,80,0.25)">'+
+  '<div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:.06;font-size:100px;line-height:1;pointer-events:none;display:flex;align-items:center;justify-content:center;flex-wrap:wrap">&#127803;&#127804;&#127803;&#127804;&#127803;</div>'+
+  '<div style="position:relative;z-index:1">'+
+  '<div style="font-size:64px;line-height:1;margin:4px 0">&#129505;</div>'+
+  '<div style="font-size:22px;font-weight:800;color:#C13358;margin:6px 0 2px">'+(w.bride||"\u041d\u0435\u0432\u0435\u0441\u0442\u0430")+' & '+(w.groom||"\u0416\u0435\u043d\u0438\u0445")+'</div>'+
+  '<div id="countdown" style="display:flex;justify-content:center;align-items:flex-end;gap:10px;padding:14px 0 6px"></div>'+
+  '<div style="font-size:13px;color:#8B4557;opacity:.8;margin:6px 0 2px">\u0414\u043e \u043d\u0430\u0448\u0435\u0439 \u0441\u0432\u0430\u0434\u044c\u0431\u044b</div>'+
+  (w.date?'<div style="font-size:12px;color:#A0526B;opacity:.7">'+new Date(w.date+"T00:00:00").toLocaleDateString("ru-RU",{day:"numeric",month:"long",year:"numeric"})+'</div>':"")+
+  '</div></div>'+
+  
+  '<div class="card"><h3>&#128146; Наша свадьба</h3>'+
+  '<div class="form-label">Имя жены</div><input id="bride" value="'+(w.bride||"")+'" placeholder="Анна">'+
+  '<div class="form-label">Имя мужа</div><input id="groom" value="'+(w.groom||"")+'" placeholder="Денис">'+
+  '<div class="form-label">Дата свадьбы</div><input id="date" type="date" value="'+(w.date||"")+'">'+
+  '<div class="form-label">Бюджет (руб)</div><input id="budget" type="number" value="'+(w.budget||"")+'" placeholder="500000">'+
+  '<div class="form-label">Место</div><input id="place" value="'+(w.place||"")+'" placeholder="Ресторан «Ромашка»">'+
+  '<button onclick="saveWeddingForm()">&#128190; Сохранить</button></div>'+
+  
+  '<div class="card"><h3>&#128203; Чек-лист подготовки</h3>'+
+  '<div style="background:#3a4d32;border-radius:10px;height:10px;margin:8px 0">'+
+    '<div style="background:'+(pct>=100?'#27ae60':'#E1306C')+';width:'+pct+'%;height:100%;border-radius:8px;transition:width .3s"></div>'+
+  '</div>'+
+  '<p style="color:#999;font-size:12px;margin-bottom:12px">'+done+' из '+total+' ('+pct+'%)</p>';
+  
+  var tasks=load("tasks")||[];
+  var sortedTasks=tasks.slice().sort(function(a,b){
+    if(a.done!==b.done)return a.done?1:-1;
+    var pri={low:0,normal:1,high:2};
+    var pa=pri[a.priority||"normal"]||1;
+    var pb=pri[b.priority||"normal"]||1;
+    return pa-pb;
+  });
+  sortedTasks.forEach(function(t){
+    var realIdx=tasks.indexOf(t);
+    var priColors={high:"#e74c3c",normal:"#f39c12",low:"#3498db"};
+    var priLabels={high:"ВЫСОКИЙ",normal:"СРЕДНИЙ",low:"НИЗКИЙ"};
+    var priColor=priColors[t.priority||"normal"]||"#f39c12";
+    var priLabel=priLabels[t.priority||"normal"]||"СРЕДНИЙ";
+    if(t._editing){
+      h='<div style="display:flex;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);gap:6px">'+
+        '<input id="cl_edit_'+realIdx+'" value="'+t.name.replace(/"/g,"&quot;")+'" style="flex:1;padding:6px;border:1px solid var(--accent);border-radius:6px;background:var(--card2);color:var(--text);font-size:13px">'+
+        '<button onclick="saveChecklistEdit('+realIdx+')" style="padding:4px 8px;background:var(--accent);color:var(--accent-text);border:none;border-radius:6px;cursor:pointer;font-size:11px">💾</button>'+
+        '<button onclick="editChecklist('+realIdx+')" style="padding:4px 8px;background:var(--card2);color:var(--text);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:11px">✕</button>'+
+      '</div>';
+    }else if(_confirmDelCL===realIdx){
+      h='<div style="display:flex;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);gap:6px;background:rgba(231,76,60,0.05);border-radius:6px">'+
+        '<div style="flex:1;font-size:12px;color:#e74c3c">Удалить задачу?</div>'+
+        '<button onclick="deleteChecklist('+realIdx+')" style="padding:4px 8px;background:#e74c3c;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:11px">Да</button>'+
+        '<button onclick="_confirmDelCL=-1;render()" style="padding:4px 8px;background:var(--card2);color:var(--text);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:11px">Нет</button>'+
+      '</div>';
+    }else{
+      h='<div style="display:flex;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">'+
+        '<input type="checkbox" style="width:auto;margin-right:10px" '+(t.done?"checked":"")+' onchange="toggleTask('+realIdx+')">'+
+        '<div style="flex:1">'+
+        '<div style="'+(t.done?"text-decoration:line-through;color:var(--text2)":"color:var(--text)")+'">'+t.name+'</div>'+
+        '<div style="display:flex;gap:6px;margin-top:2px">'+
+        '<span style="font-size:9px;padding:1px 5px;border-radius:3px;background:'+priColor+';color:#fff">'+priLabel+'</span>'+
+        (t.deadline?'<span style="font-size:9px;color:var(--text2)">📅 '+t.deadline+'</span>':'')+
+        '</div></div>'+
+        '<span onclick="editChecklist('+realIdx+')" style="cursor:pointer;padding:4px;font-size:12px;color:var(--accent)">&#9998;</span>'+
+        '<span onclick="deleteChecklist('+realIdx+')" style="cursor:pointer;padding:4px;font-size:12px;color:#e74c3c">&#10060;</span>'+
+      '</div>';
+    }
+    c.innerHTML+=h;
+  });
+  if(tasks.length===0){
+    c.innerHTML+='<div style="text-align:center;padding:12px;color:var(--text2);font-size:13px">Нет задач. Добавьте во вкладке "Задачи"</div>';
+  }
+  c.innerHTML+='</div>';
+  
+  startCountdown();
+}
+
+function getDefaultChecklist(){
+  return [
+    {name:"Забронировать ресторан",done:false},
+    {name:"Выбрать дату и время",done:false},
+    {name:"Составить список гостей",done:false},
+    {name:"Выбрать одежду",done:false},
+    {name:"Заказать фотографа",done:false},
+    {name:"Заказать видеооператора",done:false},
+    {name:"Выбрать кольца",done:false},
+    {name:"Заказать торт",done:false},
+    {name:"Разослать приглашения",done:false},
+    {name:"Составить рассадку",done:false},
+    {name:"Оплатить депозит ресторану",done:false},
+    {name:"Проверить все брони",done:false}
+  ];
+}
+
+function toggleChecklist(i){
+  var cl=load("checklist")||getDefaultChecklist();
+  cl[i].done=!cl[i].done;
+  save("checklist",cl);
+  render();
+}
+
+function editChecklist(i){
+  var cl=load("checklist")||getDefaultChecklist();
+  if(!cl[i])return;
+  cl[i]._editing=!cl[i]._editing;
+  save("checklist",cl);
+  render();
+}
+function saveChecklistEdit(i){
+  var cl=load("checklist")||getDefaultChecklist();
+  if(!cl[i])return;
+  var el=document.getElementById("cl_edit_"+i);
+  if(el&&el.value.trim()){cl[i].name=el.value.trim();}
+  cl[i]._editing=false;
+  save("checklist",cl);
+  render();
+}
+
+var _confirmDelCL=-1;
+function deleteChecklist(i){
+  if(_confirmDelCL===i){
+    var cl=load("checklist")||getDefaultChecklist();
+    cl.splice(i,1);
+    save("checklist",cl);
+    _confirmDelCL=-1;
+  }else{
+    _confirmDelCL=i;
+  }
+  render();
+}
+
+function addChecklist(){
+  var name=document.getElementById("cl_name").value;
+  if(!name)return;
+  var cl=load("checklist")||getDefaultChecklist();
+  cl.push({name:name,done:false});
+  save("checklist",cl);
+  render();
+}
+
+function saveWeddingForm(){
+  var w={bride:document.getElementById("bride").value,groom:document.getElementById("groom").value,date:document.getElementById("date").value,budget:document.getElementById("budget").value,place:document.getElementById("place").value};
+  saveWedding(w);
+  var btns=document.querySelectorAll("button");
+  for(var i=0;i<btns.length;i++){
+    if(btns[i].textContent.includes("Сохранить")){
+      var old=btns[i].innerHTML;
+      btns[i].innerHTML="&#10003; Сохранено!";
+      btns[i].style.background="#27ae60";
+      btns[i].style.color="#fff";
+      setTimeout(function(){btns[i].innerHTML=old;btns[i].style.background="";btns[i].style.color="";},1500);
+      break;
+    }
+  }
+  render();
+}
+
+function startCountdown(){
+  if(typeof _countdownInterval!=="undefined"&&_countdownInterval)clearInterval(_countdownInterval);
+  function update(){
+    var w=getWedding();
+    var el=document.getElementById("countdown");
+    if(!el)return;
+    if(!w.date){el.innerHTML="<div style='font-size:16px'>&#128197; \u0423\u043a\u0430\u0436\u0438\u0442\u0435 \u0434\u0430\u0442\u0443 \u0441\u0432\u0430\u0434\u044c\u0431\u044b</div>";return}
+    var diff=new Date(w.date+"T00:00:00")-new Date();
+    var dE=document.getElementById("tDays");
+    if(!dE){
+      el.innerHTML='<div style="display:flex;justify-content:center;align-items:flex-end;gap:10px"><div style="text-align:center"><div id="tDays" style="font-size:40px;font-weight:900;line-height:1;color:#B8334E">0</div><div style="font-size:9px;opacity:.7;text-transform:uppercase;letter-spacing:1px;color:#8B4557">\u0434\u043d\u0435\u0439</div></div><div style="font-size:28px;opacity:.4;padding-bottom:14px;color:#B8334E">:</div><div style="text-align:center"><div id="tHours" style="font-size:40px;font-weight:900;line-height:1;color:#B8334E">00</div><div style="font-size:9px;opacity:.7;text-transform:uppercase;letter-spacing:1px;color:#8B4557">\u0447\u0430\u0441\u043e\u0432</div></div><div style="font-size:28px;opacity:.4;padding-bottom:14px;color:#B8334E">:</div><div style="text-align:center"><div id="tMins" style="font-size:40px;font-weight:900;line-height:1;color:#B8334E">00</div><div style="font-size:9px;opacity:.7;text-transform:uppercase;letter-spacing:1px;color:#8B4557">\u043c\u0438\u043d\u0443\u0442</div></div><div style="font-size:28px;opacity:.4;padding-bottom:14px;color:#B8334E">:</div><div style="text-align:center"><div id="tSecs" style="font-size:40px;font-weight:900;line-height:1;color:#B8334E">00</div><div style="font-size:9px;opacity:.7;text-transform:uppercase;letter-spacing:1px;color:#8B4557">\u0441\u0435\u043a\u0443\u043d\u0434</div></div></div>';
+      dE=document.getElementById("tDays");
+    }
+    if(!dE)return;
+    if(diff<=0){
+      dE.textContent="0";
+      document.getElementById("tHours").textContent="00";
+      document.getElementById("tMins").textContent="00";
+      document.getElementById("tSecs").textContent="00";
+      return;
+    }
+    var d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+    dE.textContent=d;
+    document.getElementById("tHours").textContent=String(h).padStart(2,"0");
+    document.getElementById("tMins").textContent=String(m).padStart(2,"0");
+    document.getElementById("tSecs").textContent=String(s).padStart(2,"0");
+  }
+  update();_countdownInterval=setInterval(update,1000);
+}
+
+function renderGuests(c){
+  var guests=load("guests")||[];
+  var filter=load("guest_filter")||"all";
+  
+  var counts={
+    all:guests.length,
+    ok:guests.filter(function(g){return g.status==="подтвердил"}).length,
+    wait:guests.filter(function(g){return g.status==="ожидает"}).length,
+    no:guests.filter(function(g){return g.status==="отказался"}).length
+  };
+  
+  var filtered=guests;
+  if(filter==="ok")filtered=guests.filter(function(g){return g.status==="подтвердил"});
+  else if(filter==="wait")filtered=guests.filter(function(g){return g.status==="ожидает"});
+  else if(filter==="no")filtered=guests.filter(function(g){return g.status==="отказался"});
+  
+  var h="<div class='card'><h3>&#128101; Гости ("+guests.length+")</h3>";
+  
+  h+="<div style='display:flex;gap:6px;margin-bottom:12px'>";
+  h+="<button onclick='setGuestFilter(0)' style='flex:1;padding:8px 4px;font-size:11px;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;background:"+(filter==="all"?"#E1306C":"#eee")+";color:"+(filter==="all"?"#fff":"#333")+"'>Все ("+counts.all+")</button>";
+  h+="<button onclick='setGuestFilter(1)' style='flex:1;padding:8px 4px;font-size:11px;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;background:"+(filter==="ok"?"#27ae60":"#eee")+";color:"+(filter==="ok"?"#fff":"#333")+"'>✅ "+counts.ok+"</button>";
+  h+="<button onclick='setGuestFilter(2)' style='flex:1;padding:8px 4px;font-size:11px;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;background:"+(filter==="wait"?"#f39c12":"#eee")+";color:"+(filter==="wait"?"#fff":"#333")+"'>⏳ "+counts.wait+"</button>";
+  h+="<button onclick='setGuestFilter(3)' style='flex:1;padding:8px 4px;font-size:11px;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;background:"+(filter==="no"?"#e74c3c":"#eee")+";color:"+(filter==="no"?"#fff":"#333")+"'>❌ "+counts.no+"</button>";
+  h+="</div>";
+  
+  filtered.forEach(function(g){
+    var realIdx=guests.indexOf(g);
+    var icon=g.status==="подтвердил"?"✅":g.status==="отказался"?"❌":"⏳";
+    var color=g.status==="подтвердил"?"#27ae60":g.status==="отказался"?"#e74c3c":"#f39c12";
+    
+    h+="<div style='padding:10px 0;border-bottom:1px solid #f0f0f0'>";
+    h+="<div style='display:flex;align-items:center'>";
+    h+="<span onclick='cycleGuestStatus("+realIdx+")' style='cursor:pointer;margin-right:10px;font-size:18px'>"+icon+"</span>";
+    h+="<div style='flex:1'>";
+    h+="<div style='font-weight:500'>"+g.name+"</div>";
+    h+="<div style='font-size:11px;color:"+color+"'>"+g.status;
+    
+    h+="</div>";
+    h+="</div>";
+    h+="<span onclick='editGuest("+realIdx+")' style='cursor:pointer;padding:4px;margin-right:4px'>&#9998;</span>";
+    h+="<span onclick='removeGuest("+realIdx+")' style='cursor:pointer;padding:4px'>&#10060;</span>";
+    h+="</div>";
+    
+    // Детали (свёрнуты)
+    if(g.showDetails){
+      h+="<div style='margin-top:8px;padding:10px;background:var(--card2);border:1px solid var(--border);border-radius:8px'>";
+      h+="<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'>";
+      h+="<div style='font-size:12px;font-weight:600;color:var(--text)'>Детали</div>";
+      h+="<span onclick='toggleGuestDetails("+realIdx+")' style='cursor:pointer;padding:2px 8px;font-size:14px;color:var(--text2)'>&#10005; Закрыть</span>";
+      h+="</div>";
+      if(g._editing){
+        // Edit form
+        h+="<div style='margin-bottom:8px'>";
+        h+="<div style='font-size:11px;color:var(--text2);margin-bottom:4px'>Меню</div>";
+        h+="<select id='edit_meal_"+realIdx+"' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;background:var(--card2);color:var(--text);font-size:13px'>";
+        var meals=["мясо","рыба","веган","детское"];
+        meals.forEach(function(m){
+          h+="<option value='"+m+"'"+(g.meal===m?" selected":"")+">"+m+"</option>";
+        });
+        h+="</select></div>";
+        
+        h+="<div style='margin-bottom:8px'>";
+        h+="<div style='font-size:11px;color:var(--text2);margin-bottom:4px'>Комментарий</div>";
+        h+="<input id='edit_comment_"+realIdx+"' value='"+(g.comment||"").replace(/'/g,"&#39;")+"' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;background:var(--card2);color:var(--text);font-size:13px'>";
+        h+="</div>";
+        
+        h+="<div style='margin-bottom:8px'>";
+        h+="<div style='font-size:11px;color:var(--text2);margin-bottom:4px'>Стол</div>";
+        h+="<select id='edit_table_"+realIdx+"' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;background:var(--card2);color:var(--text);font-size:13px'>";
+        h+="<option value='-1'>Не назначен</option>";
+        var seatingData=load("seating")||{};
+        var tablesList=load("tables")||[];
+        var currentTi=seatingData[g.name];
+        tablesList.forEach(function(t,ti){
+          h+="<option value='"+ti+"'"+(currentTi===ti?" selected":"")+">"+t.name+"</option>";
+        });
+        h+="</select></div>";
+        
+        h+="<button onclick='saveGuestEdit("+realIdx+")' style='width:100%;padding:10px;background:var(--accent);color:var(--accent-text);border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;margin-top:8px'>💾 Сохранить</button>";
+      }else{
+        h+="<div style='font-size:12px;margin-bottom:4px;color:var(--text)'>Меню: "+(g.meal||"не выбрано")+"</div>";
+        if(g.comment)h+="<div style='font-size:12px;margin-bottom:4px;color:var(--text2);font-style:italic'>💬 "+g.comment+"</div>";
+      }
+      var seatingData=load("seating")||{};
+      var tableIdx=seatingData[g.name];
+      var tablesList=load("tables")||[];
+      var displayTable=tableIdx!==undefined&&tablesList[tableIdx]?tablesList[tableIdx].name:(g.table||"не назначен");
+      h+="<div style='font-size:12px;margin-bottom:4px;color:var(--text)'>Стол: "+displayTable+"</div>";
+      h+="<div style='font-size:12px;margin-bottom:4px;color:var(--text)'>RSVP: "+(g.rsvp_wedding?"Свадьба ":"")+(g.rsvp_bachelor?"Мальчишник ":"")+(g.rsvp_bachelorette?"Девичник":"")+"</div>";
+      h+="</div>";
+    }else{
+      h+="<div onclick='toggleGuestDetails("+realIdx+")' style='font-size:11px;color:var(--accent);cursor:pointer;margin-top:4px'>Подробнее ▼</div>";
+    }
+    h+="</div>";
+  });
+  
+  h+="<div style='margin-top:12px'>";
+  h+="<input id='guest_name' placeholder='Имя гостя'>";
+  h+="<input id='guest_comment' placeholder='Комментарий' style='margin-top:8px'>";
+  
+  h+="<div style='display:flex;gap:8px;margin-top:8px'>";
+  h+="<button onclick='addGuest()' style='flex:1'>&#10133; Добавить</button>";
+  h+="<button onclick='importFromVK()' style='flex:1;background:#4C75A3'>&#128101; Из VK</button>";
+  h+="</div></div></div>";
+  
+  c.innerHTML=h;
+}
+
+function toggleGuestDetails(i){
+  var guests=load("guests")||[];
+  guests[i].showDetails=!guests[i].showDetails;
+  save("guests",guests);
+  render();
+}
+
+function editGuest(i){
+  var guests=load("guests")||[];
+  var g=guests[i];
+  if(!g)return;
+  
+  // Show edit form in details
+  g._editing=!g._editing;
+  if(g._editing)g.showDetails=true;
+  save("guests",guests);
+  render();
+}
+
+function saveGuestEdit(i){
+  var guests=load("guests")||[];
+  var g=guests[i];
+  if(!g)return;
+  
+  g.comment=document.getElementById("edit_comment_"+i)?document.getElementById("edit_comment_"+i).value:g.comment;
+  g.meal=document.getElementById("edit_meal_"+i)?document.getElementById("edit_meal_"+i).value:g.meal;
+  
+  var tableSelect=document.getElementById("edit_table_"+i);
+  if(tableSelect){
+    var ti=parseInt(tableSelect.value);
+    var seating=load("seating")||{};
+    var tables=load("tables")||[];
+    if(ti>=0&&ti<tables.length){
+      seating[g.name]=ti;
+      g.table=tables[ti].name;
+    }else{
+      delete seating[g.name];
+      g.table="";
+    }
+    save("seating",seating);
+  }
+  
+  g._editing=false;
+  save("guests",guests);
+  render();
+}
+
+function setGuestFilter(n){
+  var filters=["all","ok","wait","no"];
+  save("guest_filter",filters[n]);
+  render();
+}
+
+function addGuest(){
+  var name=document.getElementById("guest_name").value;
+  var companion="";
+  var commentEl=document.getElementById("guest_comment");
+  var comment=commentEl?commentEl.value:"";
+  if(!name)return;
+  var guests=load("guests")||[];
+  guests.push({name:name,status:"ожидает",companion:companion,comment:comment,meal:"",table:"",rsvp_wedding:false,rsvp_bachelor:false,rsvp_bachelorette:false});
+  save("guests",guests);
+  render();
+}
+
+function cycleGuestStatus(i){
+  var guests=load("guests")||[];
+  var statuses=["ожидает","подтвердил","отказался"];
+  var cur=statuses.indexOf(guests[i].status);
+  guests[i].status=statuses[(cur+1)%3];
+  save("guests",guests);
+  render();
+}
+
+function removeGuest(i){
+  var guests=load("guests")||[];
+  guests.splice(i,1);
+  save("guests",guests);
+  render();
+}
+
+function importFromVK(){
+  function showVKFeedback(msg,isError){
+    var btns=document.querySelectorAll("button");
+    for(var i=0;i<btns.length;i++){
+      if(btns[i].textContent.includes("Из VK")){
+        var old=btns[i].innerHTML;
+        btns[i].innerHTML=msg;
+        btns[i].style.background=isError?"#e74c3c":"#27ae60";
+        btns[i].style.color="#fff";
+        setTimeout(function(){btns[i].innerHTML=old;btns[i].style.background="";btns[i].style.color="";},2500);
+        break;
+      }
+    }
+  }
+  
+  if(!window.vkBridge){showVKFeedback("&#9888; Нет VK Bridge",true);return}
+  
+  showVKFeedback("&#8987; Загрузка...",false);
+  
+  // Авторизация VK + получение друзей через API
+  vkBridge.send("VKWebAppGetAuthToken",{app_id:54816577,scope:"friends"}).then(function(authData){
+    var token=(authData&&authData.response&&authData.response.access_token)||"";
+    if(!token){showVKFeedback("&#9888; Нет токена VK",true);return}
+    // Получаем друзей через VK API
+    return fetch("https://api.vk.com/method/friends.get?access_token="+token+"&v=5.199&fields=first_name,last_name&count=500")
+      .then(function(r){return r.json()});
+  }).then(function(data){
+    var friends=(data&&data.response&&data.response.items)||[];
+    if(friends.length===0){showVKFeedback("&#9888; Друзья не найдены",true);return}
+    var guests=load("guests")||[];
+    var existing=guests.map(function(g){return g.name});
+    var added=0;
+    friends.forEach(function(f){
+      var name=(f.first_name||"")+" "+(f.last_name||"");
+      if(name.trim()&&existing.indexOf(name)===-1){
+        guests.push({name:name.trim(),status:"ожидает",vk_id:f.id});
+        added++;
+      }
+    });
+    save("guests",guests);
+    showVKFeedback("&#10003; "+added+" друзей!",false);
+    render();
+  }).catch(function(e){
+    console.log("VK Friends error:",e);
+    showVKFeedback("&#9888; Ошибка VK",true);
+  });
+}
+
+function getBudgetSummary(){
+  var w=getWedding();
+  var totalBudget=parseFloat(w.budget||0);
+  var budgetItems=load("budget")||[];
+  var vendorItems=load("vendors")||[];
+  var budgetPaid=budgetItems.reduce(function(s,i){return s+(i.paid?parseFloat(i.sum||0):0)},0);
+  var budgetTotal=budgetItems.reduce(function(s,i){return s+parseFloat(i.sum||0)},0);
+  var vendorPaid=vendorItems.reduce(function(s,v){return s+parseFloat(v.paid||0)},0);
+  var vendorTotal=vendorItems.reduce(function(s,v){return s+parseFloat(v.cost||0)},0);
+  var totalPaid=budgetPaid+vendorPaid;
+  var totalAll=budgetTotal+vendorTotal;
+  var totalLeft=totalAll-totalPaid;
+  var budgetLeft=totalBudget-totalPaid;
+  return {totalBudget:totalBudget,totalAll:totalAll,totalPaid:totalPaid,totalLeft:totalLeft,budgetLeft:budgetLeft,budgetPaid:budgetPaid,budgetTotal:budgetTotal,vendorPaid:vendorPaid,vendorTotal:vendorTotal};
+}
+
+function addBudget(){
+  var name=document.getElementById("b_name").value;
+  var sum=document.getElementById("b_sum").value;
+  var cat=document.getElementById("b_cat").value;
+  if(!name||!sum)return;
+  var items=load("budget")||[];
+  items.push({name:name,sum:parseFloat(sum),cat:cat,paid:false});
+  save("budget",items);
+  render();
+}
+
+var _confirmDelB=-1;
+function deleteBudget(i){
+  if(_confirmDelB===i){
+    var items=load("budget")||[];
+    items.splice(i,1);
+    save("budget",items);
+    _confirmDelB=-1;
+  }else{
+    _confirmDelB=i;
+  }
+  render();
+}
+
+function toggleBudgetPaid(i){
+  var items=load("budget")||[];
+  if(items[i]){items[i].paid=!items[i].paid;save("budget",items);render();}
+}
+
+var _confirmDelV=-1;
+function deleteVendor(i){
+  if(_confirmDelV===i){
+    var items=load("vendors")||[];
+    items.splice(i,1);
+    save("vendors",items);
+    _confirmDelV=-1;
+  }else{
+    _confirmDelV=i;
+  }
+  render();
+}
+
+function renderBudget(c){
+  var items=load("budget")||[];
+  var summary=getBudgetSummary();
+  var totalBudget=summary.totalBudget;
+  var myTotal=items.reduce(function(s,i){return s+parseFloat(i.sum||0)},0);
+  var myPaid=items.reduce(function(s,i){return s+(i.paid?parseFloat(i.sum||0):0)},0);
+  var myLeft=myTotal-myPaid;
+  
+  var h="<div class='card'><h3>&#128176; Бюджет ("+items.length+")</h3>";
+  
+  h+="<div style='display:flex;justify-content:space-between;margin-bottom:12px'>";
+  h+="<div><div style='font-size:11px;color:#999'>Всего</div><div style='font-size:18px;font-weight:700'>"+myTotal.toLocaleString()+" ₽</div></div>";
+  h+="<div><div style='font-size:11px;color:#999'>Оплачено</div><div style='font-size:18px;font-weight:700;color:#27ae60'>"+myPaid.toLocaleString()+" ₽</div></div>";
+  h+="<div><div style='font-size:11px;color:#999'>Осталось</div><div style='font-size:18px;font-weight:700;color:#e74c3c'>"+myLeft.toLocaleString()+" ₽</div></div>";
+  h+="</div>";
+  
+  if(totalBudget>0){
+    var pctPaid=Math.min(100,Math.round(summary.totalPaid/totalBudget*100));
+    h+="<div style='background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--accent-text);border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 4px 20px rgba(0,0,0,0.15)'>";
+    h+="<div style='display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:12px'>";
+    h+="<div><div style='font-size:12px;opacity:.9;font-weight:500'>\u0411\u044e\u0434\u0436\u0435\u0442 \u0441\u0432\u0430\u0434\u044c\u0431\u044b</div><div style='font-size:22px;font-weight:800'>"+totalBudget.toLocaleString()+" \u20bd</div></div>";
+    h+="<div style='text-align:right'><div style='font-size:12px;opacity:.9;font-weight:500'>\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c</div><div style='font-size:22px;font-weight:800'>"+summary.budgetLeft.toLocaleString()+" \u20bd</div></div>";
+    h+="</div>";
+    h+="<div style='background:rgba(255,255,255,0.3);border-radius:10px;height:12px;overflow:hidden'>";
+    h+="<div style='background:#fff;width:"+pctPaid+"%;height:100%;border-radius:10px;transition:width .3s;box-shadow:0 2px 8px rgba(0,0,0,0.2)'></div>";
+    h+="</div>";
+    h+="<div style='display:flex;justify-content:space-between;font-size:11px;opacity:.8;margin-top:6px'>";
+    h+="<span>\u041e\u043f\u043b\u0430\u0447\u0435\u043d\u043e: "+summary.totalPaid.toLocaleString()+" \u20bd</span>";
+    h+="<span>"+pctPaid+"%</span>";
+    h+="</div></div><p style='display:none'>Бюджет: "+totalBudget.toLocaleString()+" ₽ | Осталось от бюджета: "+summary.budgetLeft.toLocaleString()+" ₽</p>";
+  }
+  
+  items.forEach(function(item,i){
+    var pct=item.paid?100:0;
+    var statusColor=item.paid?"#27ae60":"#e74c3c";
+    
+    h+="<div style='padding:12px 0;border-bottom:1px solid var(--border)'>";
+    h+="<div style='display:flex;justify-content:flex-start;align-items:center;gap:10px'>";
+    h+="<div style='flex:1'>";
+    h+="<div style='font-weight:500'>"+item.name+"</div>";
+    h+="<div style='font-size:11px;color:#999'>"+(item.cat||"")+"</div>";
+    h+="</div>";
+    h+="<span onclick='deleteBudget("+i+")' style='cursor:pointer;padding:4px'>&#10060;</span>";
+    h+="</div>";
+    
+    h+="<div style='display:flex;justify-content:space-between;font-size:12px;margin:6px 0 3px'>";
+    h+="<span>"+(item.paid?parseFloat(item.sum||0).toLocaleString():0)+" / "+parseFloat(item.sum||0).toLocaleString()+" ₽</span>";
+    h+="<span style='color:"+statusColor+"'>"+pct+"%</span>";
+    h+="</div>";
+    h+="<div style='background:var(--border);border-radius:4px;height:6px'><div style='background:"+statusColor+";width:"+pct+"%;height:100%;border-radius:4px;transition:width .3s'></div></div>";
+    
+    if(!item.paid){
+      h+="<button onclick='toggleBudgetPaid("+i+")' style='margin-top:8px;padding:6px 16px;font-size:13px;border-radius:20px;background:#27ae60;color:#fff;border:none;cursor:pointer'>&#9989; Оплатить</button>";
+    }else{
+      h+="<button onclick='toggleBudgetPaid("+i+")' style='margin-top:8px;padding:6px 16px;font-size:13px;border-radius:20px;background:var(--card2);color:var(--text2);border:1px solid var(--border);cursor:pointer'>&#8634; Отменить оплату</button>";
+    }
+    h+="</div>";
+  });
+  
+  h+="<div style='margin-top:16px'>";
+  h+="<input id='b_name' placeholder='Статья расходов'>";
+  h+="<input id='b_sum' type='number' placeholder='Сумма'>";
+  h+="<select id='b_cat'>";
+  h+="<option>Ресторан</option>";
+  h+="<option>Одежда</option>";
+  h+="<option>Кольца</option>";
+  h+="<option>Фото</option>";
+  h+="<option>Цветы</option>";
+  h+="<option>Торт</option>";
+  h+="<option>Другое</option>";
+  h+="</select>";
+  h+="<button onclick='addBudget()'>&#10133; Добавить</button>";
+  h+="</div></div>";
+  
+  c.innerHTML=showNotifications()+h;
+}
+
+function renderVendors(c){
+  var vendors=load("vendors")||[];
+  var summary=getBudgetSummary();
+  var totalPaid=summary.vendorPaid;
+  var totalCost=summary.vendorTotal;
+  var totalBudget=summary.totalBudget;
+  
+  var h="<div class='card'><h3>&#127978; Поставщики ("+vendors.length+")</h3>";
+  
+  h+="<div style='display:flex;justify-content:space-between;margin-bottom:12px'>";
+  h+="<div><div style='font-size:11px;color:#999'>Всего</div><div style='font-size:18px;font-weight:700'>"+totalCost.toLocaleString()+" ₽</div></div>";
+  h+="<div><div style='font-size:11px;color:#999'>Оплачено</div><div style='font-size:18px;font-weight:700;color:#27ae60'>"+totalPaid.toLocaleString()+" ₽</div></div>";
+  h+="<div><div style='font-size:11px;color:#999'>Осталось</div><div style='font-size:18px;font-weight:700;color:#e74c3c'>"+(totalCost-totalPaid).toLocaleString()+" ₽</div></div>";
+  h+="</div>";
+  
+  if(totalBudget>0){
+    var pctPaid=Math.min(100,Math.round(summary.totalPaid/totalBudget*100));
+    h+="<div style='background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--accent-text);border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 4px 20px rgba(0,0,0,0.15)'>";
+    h+="<div style='display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:12px'>";
+    h+="<div><div style='font-size:12px;opacity:.9;font-weight:500'>\u0411\u044e\u0434\u0436\u0435\u0442 \u0441\u0432\u0430\u0434\u044c\u0431\u044b</div><div style='font-size:22px;font-weight:800'>"+totalBudget.toLocaleString()+" \u20bd</div></div>";
+    h+="<div style='text-align:right'><div style='font-size:12px;opacity:.9;font-weight:500'>\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c</div><div style='font-size:22px;font-weight:800'>"+summary.budgetLeft.toLocaleString()+" \u20bd</div></div>";
+    h+="</div>";
+    h+="<div style='background:rgba(255,255,255,0.3);border-radius:10px;height:12px;overflow:hidden'>";
+    h+="<div style='background:#fff;width:"+pctPaid+"%;height:100%;border-radius:10px;transition:width .3s;box-shadow:0 2px 8px rgba(0,0,0,0.2)'></div>";
+    h+="</div>";
+    h+="<div style='display:flex;justify-content:space-between;font-size:11px;opacity:.8;margin-top:6px'>";
+    h+="<span>\u041e\u043f\u043b\u0430\u0447\u0435\u043d\u043e: "+summary.totalPaid.toLocaleString()+" \u20bd</span>";
+    h+="<span>"+pctPaid+"%</span>";
+    h+="</div></div><p style='display:none'>Бюджет: "+totalBudget.toLocaleString()+" ₽ | Осталось от бюджета: "+summary.budgetLeft.toLocaleString()+" ₽</p>";
+  }
+  
+  // Список поставщиков
+  vendors.forEach(function(v,i){
+    var pct=v.cost>0?Math.min(100,Math.round(v.paid/v.cost*100)):0;
+    var statusColor=pct>=100?"#27ae60":pct>0?"#f39c12":"#e74c3c";
+    
+    h+="<div style='padding:12px 0;border-bottom:1px solid #f0f0f0'>";
+    h+="<div style='display:flex;justify-content:flex-start;align-items:center;gap:10px'>";
+    h+="<div style='flex:1'>";
+    h+="<div style='font-weight:500'>"+v.name+"</div>";
+    h+="<div style='font-size:11px;color:#999'>"+(v.cat||"")+" "+(v.phone?" | "+v.phone:"")+"</div>";
+    h+="</div>";
+    h+="<span onclick='removeVendor("+i+")' style='cursor:pointer;padding:4px'>&#10060;</span>";
+    h+="</div>";
+    
+    h+="<div style='display:flex;justify-content:space-between;font-size:12px;margin:6px 0 3px'>";
+    h+="<span>"+parseFloat(v.paid||0).toLocaleString()+" / "+parseFloat(v.cost||0).toLocaleString()+" ₽</span>";
+    h+="<span style='color:"+statusColor+"'>"+pct+"%</span>";
+    h+="</div>";
+    h+="<div style='background:#eee;border-radius:4px;height:6px'><div style='background:"+statusColor+";width:"+pct+"%;height:100%;border-radius:4px'></div></div>";
+    
+    // Кнопка оплаты
+    if(parseFloat(v.paid||0)<parseFloat(v.cost||0)){
+      h+="<button onclick='payVendor("+i+")' style='margin-top:8px;padding:6px 16px;font-size:13px;border-radius:20px;background:#27ae60;color:#fff;border:none;cursor:pointer'>&#9989; Оплатить</button>";
+    }else{
+      h+="<button onclick='payVendor("+i+")' style='margin-top:8px;padding:6px 16px;font-size:13px;border-radius:20px;background:var(--card2);color:var(--text2);border:1px solid var(--border);cursor:pointer'>&#8634; Отменить оплату</button>";
+    }
+    h+="</div>";
+  });
+  
+  // Форма добавления
+  h+="<div style='margin-top:12px'>";
+  h+="<input id='v_name' placeholder='Название'>";
+  h+="<select id='v_cat' style='width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:14px;margin-bottom:8px'>";
+  h+="<option>Фотограф</option>";
+  h+="<option>Ресторан</option>";
+  h+="<option>Цветы</option>";
+  h+="<option>Торт</option>";
+  h+="<option>Музыка/DJ</option>";
+  h+="<option>Ведущий</option>";
+  h+="<option>Декор</option>";
+  h+="<option>Одежда</option>";
+  h+="<option>Кольца</option>";
+  h+="<option>Другое</option>";
+  h+="</select>";
+  h+="<input id='v_phone' placeholder='Телефон'>";
+  h+="<input id='v_cost' type='number' placeholder='Стоимость'>";
+  h+="<button onclick='addVendor()'>➕ Добавить</button>";
+  h+="</div></div>";
+  
+  c.innerHTML=h;
+}
+
+function addVendor(){
+  var name=document.getElementById("v_name").value;
+  var cat=document.getElementById("v_cat").value;
+  var phone=document.getElementById("v_phone").value;
+  var cost=document.getElementById("v_cost").value;
+  if(!name||!cost)return;
+  var vendors=load("vendors")||[];
+  vendors.push({name:name,cat:cat,phone:phone,cost:parseFloat(cost),paid:0});
+  save("vendors",vendors);
+  render();
+}
+
+function payVendor(i){
+  var vendors=load("vendors")||[];
+  if(vendors[i]){
+    var cost=parseFloat(vendors[i].cost||0);
+    var paid=parseFloat(vendors[i].paid||0);
+    if(paid>=cost){
+      vendors[i].paid=0;
+    }else{
+      vendors[i].paid=cost;
+    }
+    save("vendors",vendors);
+    render();
+  }
+}
+
+var _confirmDelRV=-1;
+function removeVendor(i){
+  if(_confirmDelRV===i){
+    var vendors=load("vendors")||[];
+    vendors.splice(i,1);
+    save("vendors",vendors);
+    _confirmDelRV=-1;
+  }else{
+    _confirmDelRV=i;
+  }
+  render();
+}
+
+function renderSeating(c){
+  var guests=load("guests")||[];
+  var tables=load("tables")||[{name:"Стол 1",seats:8},{name:"Стол 2",seats:8}];
+  
+  // Группируем гостей по столам
+  var seating=load("seating")||{};
+  
+  var h="<div class='card'><h3>&#127869; Рассадка</h3>";
+  h+="<p style='font-size:12px;color:#999;margin-bottom:12px'>Назначьте гостей за столы</p>";
+  
+  // Столы
+  tables.forEach(function(table,ti){
+    var assigned=Object.keys(seating).filter(function(g){return seating[g]===ti});
+    var pct=table.seats>0?Math.round(assigned.length/table.seats*100):0;
+    
+    h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);border-radius:16px;padding:16px;margin-bottom:12px;border:2px solid "+(pct>=100?"#00E5FF":"#3a4d32")+"'>";
+    h+="<div style='display:flex;justify-content:flex-start;align-items:center;gap:10px;margin-bottom:10px'>";
+    h+="<div style='font-weight:700;font-size:15px'>"+table.name+"</div>";
+    h+="<div style='display:flex;gap:6px'>";
+    h+="<span class='badge' style='background:"+(pct>=100?"#00E5FF":"#3a4d32")+";color:"+(pct>=100?"#fff":"#666")+"'>"+assigned.length+"/"+table.seats+"</span>";
+    h+="<span onclick='editTable("+ti+")' style='cursor:pointer;padding:2px 6px;font-size:12px;color:var(--accent)'>&#9998;</span>";
+    if(_confirmDeleteTable===ti){
+      h+="<span style='font-size:10px;color:#e74c3c;padding:2px 4px'>Удалить?</span>";
+      h+="<span onclick='removeTable("+ti+")' style='cursor:pointer;padding:2px 6px;font-size:12px;color:#fff;background:#e74c3c;border-radius:4px'>Да</span>";
+      h+="<span onclick='cancelDeleteTable()' style='cursor:pointer;padding:2px 6px;font-size:12px;color:var(--text)'>Нет</span>";
+    }else{
+      h+="<span onclick='askDeleteTable("+ti+")' style='cursor:pointer;padding:2px 6px;font-size:12px;color:#e74c3c'>&#10060;</span>";
+    }
+    h+="</div>";
+    h+="</div>";
+    
+    // Прогресс
+    if(table._editing){
+      h+="<div style='background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px'>";
+      h+="<div style='font-size:11px;color:var(--text2);margin-bottom:4px'>Название</div>";
+      h+="<input id='edit_table_name_"+ti+"' value='"+table.name.replace(/'/g,"&#39;")+"' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text);font-size:13px;margin-bottom:8px'>";
+      h+="<div style='font-size:11px;color:var(--text2);margin-bottom:4px'>Мест</div>";
+      h+="<input id='edit_table_seats_"+ti+"' type='number' value='"+table.seats+"' min='1' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text);font-size:13px;margin-bottom:8px'>";
+      h+="<div style='display:flex;gap:8px'>";
+      h+="<button onclick='saveTableEdit("+ti+")' style='flex:1;padding:8px;background:var(--accent);color:var(--accent-text);border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer'>💾 Сохранить</button>";
+      h+="<button onclick='cancelTableEdit("+ti+")' style='flex:1;padding:8px;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:12px;cursor:pointer'>✕ Отмена</button>";
+      h+="</div></div>";
+    }else{
+      h+="<div class='progress-bar' style='height:8px;margin-bottom:10px'><div class='progress-fill' style='width:"+pct+"%;background:linear-gradient(90deg,#00E5FF,#00b8cc)'></div></div>";
+    }
+    
+    // Места — кружки
+    h+="<div style='display:flex;flex-wrap:wrap;gap:8px'>";
+    for(var i=0;i<table.seats;i++){
+      var guestName=Object.keys(seating).find(function(g){return seating[g]===ti})||null;
+      // Находим гостя на этом месте
+      var assignedHere=Object.keys(seating).filter(function(g){return seating[g]===ti});
+      if(i<assignedHere.length){
+        var gName=assignedHere[i];
+        h+="<div onclick='unassignGuest(\""+gName+"\")' style='padding:6px 12px;border-radius:20px;background:linear-gradient(135deg,#00E5FF,#00b8cc);color:#243020;display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,229,255,0.3)'>"+gName+" <span style='font-size:10px;opacity:.7'>✕</span></div>";
+      }else{
+        h+="<div onclick='showGuestPicker("+ti+","+i+")' style='width:44px;height:44px;border-radius:50%;border:2px dashed #3a4d32;display:flex;align-items:center;justify-content:center;font-size:16px;color:#ccc;cursor:pointer;transition:all .2s'>+</div>";
+      }
+    }
+    h+="</div>";
+    
+    // Кнопка назначения
+    h+="<select onchange='assignGuest(this.value,"+ti+")' style='width:100%;margin-top:10px;padding:10px;border:2px solid var(--border);border-radius:12px;font-size:14px;background:var(--card2);color:var(--text)'>";
+    h+="<option value=''>+ Назначить гостя</option>";
+    guests.forEach(function(g){
+      if(seating[g.name]===undefined){
+        h+="<option value='"+g.name+"'>"+g.name+"</option>";
+      }
+    });
+    h+="</select>";
+    
+    if(_guestPickerTable===ti){
+      var unassignedGuests=guests.filter(function(g){return seating[g.name]===undefined});
+      if(unassignedGuests.length>0){
+        h+="<div style='background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px;margin-top:8px'>";
+        h+="<div style='font-size:12px;color:var(--text2);margin-bottom:6px'>Выберите гостя:</div>";
+        unassignedGuests.forEach(function(g){
+          h+="<div onclick='assignGuestFromPicker(\""+g.name+"\","+ti+")' style='padding:8px 12px;margin:4px 0;background:var(--card);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:13px;color:var(--text)'>"+g.name+"</div>";
+        });
+        h+="<button onclick='hideGuestPicker()' style='width:100%;padding:6px;margin-top:6px;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:6px;font-size:12px;cursor:pointer'>✕ Закрыть</button>";
+        h+="</div>";
+      }
+    }
+    h+="</div>";
+  });
+  
+  // Кнопка добавления стола
+  if(_showAddTable){
+    h+="<div style='background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:12px'>";
+    h+="<div style='font-size:12px;color:var(--text2);margin-bottom:4px'>Название</div>";
+    h+="<input id='new_table_name' placeholder='Название стола' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px;margin-bottom:8px'>";
+    h+="<div style='font-size:12px;color:var(--text2);margin-bottom:4px'>Мест</div>";
+    h+="<input id='new_table_seats' type='number' value='8' min='1' style='width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px;margin-bottom:8px'>";
+    h+="<div style='display:flex;gap:8px'>";
+    h+="<button onclick='addTable()' style='flex:1;padding:10px;background:var(--accent);color:var(--accent-text);border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer'>➕ Добавить</button>";
+    h+="<button onclick='toggleAddTable()' style='flex:1;padding:10px;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:13px;cursor:pointer'>✕ Отмена</button>";
+    h+="</div></div>";
+  }else{
+    h+="<button onclick='toggleAddTable()' style='background:rgba(0,229,255,0.1);color:#00E5FF;box-shadow:none;border:2px dashed #e8739a'>&#10133; Добавить стол</button>";
+  }
+  
+  // Неназначенные гости
+  var unassigned=guests.filter(function(g){return seating[g.name]===undefined});
+  if(unassigned.length>0){
+    h+="<div style='margin-top:16px'><h3>&#128101; Без места ("+unassigned.length+")</h3>";
+    unassigned.forEach(function(g){
+      h+="<div class='list-item' style='display:flex;align-items:center;gap:8px'>";
+      h+="<div style='width:32px;height:32px;border-radius:50%;background:#3a4d32;display:flex;align-items:center;justify-content:center;font-size:14px;color:#00E5FF'>&#128100;</div>";
+      h+="<div style='flex:1;font-size:13px'>"+g.name+"</div>";
+      h+="</div>";
+    });
+    h+="</div>";
+  }
+  
+  h+="</div>";
+  c.innerHTML=h;
+}
+
+var _guestPickerTable=-1;
+function showGuestPicker(tableIdx,seatIdx){
+  _guestPickerTable=tableIdx;
+  render();
+}
+
+function hideGuestPicker(){
+  _guestPickerTable=-1;
+  render();
+}
+
+function assignGuestFromPicker(name,tableIdx){
+  if(!name)return;
+  assignGuest(name,tableIdx);
+  _guestPickerTable=-1;
+  render();
+}
+
+function assignGuest(name,tableIdx){
+  if(!name)return;
+  var seating=load("seating")||{};
+  seating[name]=tableIdx;
+  save("seating",seating);
+  
+  // Update guest card
+  var tables=load("tables")||[];
+  var tableName=tables[tableIdx]?tables[tableIdx].name:("Стол "+(tableIdx+1));
+  var guests=load("guests")||[];
+  guests.forEach(function(g){
+    if(g.name===name){
+      g.table=tableName;
+    }
+  });
+  save("guests",guests);
+  render();
+}
+
+function unassignGuest(name){
+  var seating=load("seating")||{};
+  delete seating[name];
+  save("seating",seating);
+  
+  // Clear guest card
+  var guests=load("guests")||[];
+  guests.forEach(function(g){
+    if(g.name===name){
+      g.table="";
+    }
+  });
+  save("guests",guests);
+  render();
+}
+
+function editTable(i){
+  var tables=load("tables")||[];
+  if(tables[i]){
+    tables[i]._editing=true;
+    save("tables",tables);
+    render();
+  }
+}
+
+function saveTableEdit(i){
+  var tables=load("tables")||[];
+  if(!tables[i])return;
+  var nameEl=document.getElementById("edit_table_name_"+i);
+  var seatsEl=document.getElementById("edit_table_seats_"+i);
+  if(nameEl)tables[i].name=nameEl.value||tables[i].name;
+  if(seatsEl)tables[i].seats=parseInt(seatsEl.value)||tables[i].seats;
+  tables[i]._editing=false;
+  save("tables",tables);
+  render();
+}
+
+function cancelTableEdit(i){
+  var tables=load("tables")||[];
+  if(tables[i]){
+    tables[i]._editing=false;
+    save("tables",tables);
+    render();
+  }
+}
+
+var _showAddTable=false;
+function toggleAddTable(){
+  _showAddTable=!_showAddTable;
+  render();
+}
+
+function addTable(){
+  var nameEl=document.getElementById("new_table_name");
+  var seatsEl=document.getElementById("new_table_seats");
+  var name=nameEl?nameEl.value.trim():"";
+  var seats=seatsEl?parseInt(seatsEl.value)||8:8;
+  if(!name)return;
+  var tables=load("tables")||[];
+  tables.push({name:name,seats:seats});
+  save("tables",tables);
+  _showAddTable=false;
+  render();
+}
+
+var _confirmDeleteTable=-1;
+function askDeleteTable(idx){
+  _confirmDeleteTable=idx;
+  render();
+}
+
+function removeTable(idx){
+  var tables=load("tables")||[];
+  tables.splice(idx,1);
+  save("tables",tables);
+  
+  // Обновляем seating
+  var seating=load("seating")||{};
+  Object.keys(seating).forEach(function(g){
+    if(seating[g]===idx)delete seating[g];
+    else if(seating[g]>idx)seating[g]--;
+  });
+  save("seating",seating);
+  _confirmDeleteTable=-1;
+  render();
+}
+
+function cancelDeleteTable(){
+  _confirmDeleteTable=-1;
+  render();
+}
+
+function toggleTaskExpand(i){
+  var tasks=load("tasks")||[];
+  if(tasks[i]){tasks[i]._expanded=!tasks[i]._expanded;save("tasks",tasks);render();}
+}
+
+function addTask(){
+  var name=document.getElementById("task_name").value;
+  if(!name)return;
+  var priority=document.getElementById("task_priority")?document.getElementById("task_priority").value:"normal";
+  var deadline=document.getElementById("task_deadline")?document.getElementById("task_deadline").value:"";
+  var tasks=load("tasks")||[];
+  tasks.push({name:name,priority:priority,deadline:deadline,done:false});
+  save("tasks",tasks);
+  render();
+}
+
+function toggleTask(i){
+  var tasks=load("tasks")||[];
+  if(tasks[i]){tasks[i].done=!tasks[i].done;save("tasks",tasks);render();}
+}
+
+var _confirmDelT=-1;
+function deleteTask(i){
+  if(_confirmDelT===i){
+    var tasks=load("tasks")||[];
+    tasks.splice(i,1);
+    save("tasks",tasks);
+    _confirmDelT=-1;
+  }else{
+    _confirmDelT=i;
+  }
+  render();
+}
+
+function editTask(i){
+  var tasks=load("tasks")||[];
+  if(!tasks[i])return;
+  tasks[i]._editing=!tasks[i]._editing;
+  save("tasks",tasks);
+  render();
+}
+function saveTaskEdit(i){
+  var tasks=load("tasks")||[];
+  if(!tasks[i])return;
+  var el=document.getElementById("task_edit_"+i);
+  if(el&&el.value.trim()){tasks[i].name=el.value.trim();}
+  tasks[i]._editing=false;
+  save("tasks",tasks);
+  render();
+}
+
+function renderTasks(c){
+  var tasks=load("tasks")||[];
+  var done=tasks.filter(function(t){return t.done}).length;
+  
+  var h="<div class='card'><h3>&#9989; Задачи ("+done+"/"+tasks.length+")</h3>";
+  
+  var pct=tasks.length>0?Math.round(done/tasks.length*100):0;
+  h+="<div style='background:var(--border);border-radius:10px;height:10px;margin:8px 0 12px'>";
+  h+="<div style='background:"+(pct>=100?"#27ae60":"#E1306C")+";width:"+pct+"%;height:100%;border-radius:8px;transition:width .3s'></div>";
+  h+="</div>";
+  
+  var sorted=tasks.slice().sort(function(a,b){
+    if(a.done!==b.done)return a.done?1:-1;
+    var pri={low:0,normal:1,high:2};
+    var pa=pri[a.priority||"normal"]||1;
+    var pb=pri[b.priority||"normal"]||1;
+    return pa-pb;
+  });
+  
+  sorted.forEach(function(t){
+    var realIdx=tasks.indexOf(t);
+    var priColors={high:"#e74c3c",normal:"#f39c12",low:"#3498db"};
+    var priLabels={high:"Высокий",normal:"Средний",low:"Низкий"};
+    var priColor=priColors[t.priority||"normal"]||"#f39c12";
+    var priLabel=priLabels[t.priority||"normal"]||"Средний";
+    
+    var overdue=false;
+    if(t.deadline&&!t.done)overdue=new Date(t.deadline)<new Date();
+    
+    h+="<div style='border-bottom:1px solid var(--border);padding:10px 0'>";
+    h+="<div onclick='toggleTaskExpand("+realIdx+")' style='display:flex;align-items:center;gap:10px;cursor:pointer'>";
+    h+="<input type='checkbox' style='width:auto;margin:0' "+(t.done?"checked":"")+" onclick='event.stopPropagation();toggleTask("+realIdx+")'>";
+    h+="<div style='flex:1'>";
+    h+="<div style='font-weight:500"+(t.done?";text-decoration:line-through;color:var(--text2)":";color:var(--text)")+"'>"+t.name+"</div>";
+    h+="<div style='display:flex;gap:8px;margin-top:3px'>";
+    h+="<span style='font-size:10px;padding:2px 6px;border-radius:4px;background:"+priColor+";color:#fff'>"+priLabel+"</span>";
+    if(t.deadline){
+      h+="<span style='font-size:10px;color:"+(overdue?"#e74c3c":"var(--text2)")+"'>Дедлайн: "+t.deadline+"</span>";
+    }
+    h+="</div></div>";
+    h+="<span style='font-size:12px;color:var(--text2)'>"+(t._expanded?"&#9650;":"&#9660;")+"</span>";
+    h+="</div>";
+    
+    if(t._expanded){
+      h+="<div style='padding:10px 0 4px 30px'>";
+      if(t.deadline)h+="<div style='font-size:12px;color:var(--text);margin-bottom:4px'>Дедлайн: "+t.deadline+(overdue?" <span style='color:#e74c3c;font-weight:700'>(просрочено)</span>":"")+"</div>";
+      h+="<div style='display:flex;gap:8px;margin-top:8px'>";
+      h+="<button onclick='toggleTask("+realIdx+")' style='flex:1;padding:6px;font-size:12px;border-radius:8px;background:"+(t.done?"var(--card2)":"#27ae60")+";color:"+(t.done?"var(--text2)":"#fff")+";border:"+(t.done?"1px solid var(--border)":"none")+";cursor:pointer'>"+(t.done?"&#8634; Отменить":"&#9989; Выполнено")+"</button>";
+      if(t._editing){
+        h+="<input id='task_edit_"+realIdx+"' value='"+t.name.replace(/'/g,"&#39;")+"' style='width:100%;padding:8px;border:1px solid var(--accent);border-radius:8px;background:var(--card2);color:var(--text);font-size:13px;margin-bottom:8px'>";
+        h+="<button onclick='saveTaskEdit("+realIdx+")' style='flex:1;padding:6px;font-size:12px;border-radius:8px;background:var(--accent);color:var(--accent-text);border:none;cursor:pointer'>&#128190; Сохранить</button>";
+      }else{
+        h+="<button onclick='editTask("+realIdx+")' style='flex:1;padding:6px;font-size:12px;border-radius:8px;background:var(--card2);color:var(--text);border:1px solid var(--border);cursor:pointer'>&#9998; Редактировать</button>";
+      }
+      if(_confirmDelT===realIdx){
+        h+="<span style='flex:1;font-size:11px;color:#e74c3c;padding:6px'>Удалить?</span>";
+        h+="<button onclick='deleteTask("+realIdx+")' style='padding:6px 10px;font-size:12px;border-radius:8px;background:#e74c3c;color:#fff;border:none;cursor:pointer'>Да</button>";
+        h+="<button onclick='_confirmDelT=-1;render()' style='padding:6px 10px;font-size:12px;border-radius:8px;background:var(--card2);color:var(--text);border:1px solid var(--border);cursor:pointer'>Нет</button>";
+      }else{
+        h+="<button onclick='deleteTask("+realIdx+")' style='flex:1;padding:6px;font-size:12px;border-radius:8px;background:#e74c3c;color:#fff;border:none;cursor:pointer'>&#10060; Удалить</button>";
+      }
+      h+="</div></div>";
+    }
+    h+="</div>";
+  });
+  
+  if(tasks.length===0){
+    h+="<div style='text-align:center;padding:20px;color:var(--text2)'>&#128203; Нет задач</div>";
+  }
+  
+  h+="<div style='margin-top:16px'>";
+  h+="<input id='task_name' placeholder='Новая задача'>";
+  h+="<input id='task_deadline' type='date' style='margin-top:8px'>";
+  h+="<select id='task_priority' style='width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:14px;margin-top:8px;background:var(--card2);color:var(--text)'>";
+  h+="<option value='high'>Высокий</option>";
+  h+="<option value='normal' selected>Средний</option>";
+  h+="<option value='low'>Низкий</option>";
+  h+="</select>";
+  h+="<button onclick='addTask()'>&#10133; Добавить</button>";
+  h+="</div></div>";
+  
+  c.innerHTML=showNotifications()+h;
+}
+
+function checkNotifications(){
+  var tasks=load("tasks")||[];
+  var vendors=load("vendors")||[];
+  var w=getWedding();
+  var notifs=[];
+  
+  tasks.forEach(function(t){
+    if(!t.done&&t.deadline){
+      var days=Math.ceil((new Date(t.deadline)-new Date())/86400000);
+      if(days<=0)notifs.push("&#9888; Просрочено: "+t.name);
+      else if(days<=3)notifs.push("&#128197; Через "+days+" дн: "+t.name);
+    }
+  });
+  
+  vendors.forEach(function(v){
+    var remain=parseFloat(v.cost||0)-parseFloat(v.paid||0);
+    if(remain>0&&parseFloat(v.paid||0)===0)notifs.push("&#128176; Оплатить: "+v.name+" ("+remain.toLocaleString()+" ₽)");
+  });
+  
+  if(w.date){
+    var days=Math.ceil((new Date(w.date)-new Date())/86400000);
+    if(days>0&&days<=7)notifs.push("&#128146; До свадьбы "+days+" дн!");
+  }
+  
+  return notifs;
+}
+
+function showNotifications(){
+  var notifs=checkNotifications();
+  if(notifs.length===0)return "";
+  var h="<div style='background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);border-radius:14px;position:relative;overflow:hidden;border-left:4px solid #00E5FF;padding:12px;margin-bottom:12px'>";
+  h+="<div style='font-weight:600;margin-bottom:6px'>&#128276; Уведомления</div>";
+  notifs.forEach(function(n){
+    h+="<div style='font-size:12px;margin-bottom:4px'>"+n+"</div>";
+  });
+  h+="</div>";
+  return h;
+}
+
+function renderSettings(c){
+  var w=getWedding();
+  var guests=load("guests")||[];
+  var budget=load("budget")||[];
+  var tasks=load("tasks")||[];
+  var checklist=load("checklist")||[];
+  var vendors=load("vendors")||[];
+  
+  var h=showNotifications();
+  
+  h+="<div class='card'><h3>&#9881; Настройки</h3>";
+  
+  h+="<div style='display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px'>";
+  h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);padding:14px 10px;border-radius:14px;text-align:center;border:1px solid rgba(0,0,0,0.04)'><div style='font-size:18px;font-weight:700;color:#E1306C'>"+guests.length+"</div><div style='font-size:10px;color:#999'>гостей</div></div>";
+  h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);padding:14px 10px;border-radius:14px;text-align:center;border:1px solid rgba(0,0,0,0.04)'><div style='font-size:18px;font-weight:700;color:#27ae60'>"+budget.length+"</div><div style='font-size:10px;color:#999'>расходов</div></div>";
+  h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);padding:14px 10px;border-radius:14px;text-align:center;border:1px solid rgba(0,0,0,0.04)'><div style='font-size:18px;font-weight:700;color:#f39c12'>"+vendors.length+"</div><div style='font-size:10px;color:#999'>поставщиков</div></div>";
+  h+="</div>";
+  
+  h+="<div style='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px'>";
+  h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);padding:14px 10px;border-radius:14px;text-align:center;border:1px solid rgba(0,0,0,0.04)'><div style='font-size:18px;font-weight:700;color:#3498db'>"+tasks.filter(function(t){return !t.done}).length+"</div><div style='font-size:10px;color:#999'>задач</div></div>";
+  h+="<div style='background:linear-gradient(135deg,#2d3b28,#243020);padding:14px 10px;border-radius:14px;text-align:center;border:1px solid rgba(0,0,0,0.04)'><div style='font-size:18px;font-weight:700;color:#9b59b6'>"+checklist.filter(function(i){return i.done}).length+"/"+checklist.length+"</div><div style='font-size:10px;color:#999'>чек</div></div>";
+  h+="</div>";
+  
+  h+="<button onclick='exportData()' style='margin-bottom:8px'>&#128229; Экспорт</button>";
+  h+="<button onclick='importData()' style='margin-bottom:8px;background:#3498db'>&#128228; Импорт</button>";
+  h+="<input type='file' id='import_file' accept='.json' style='display:none' onchange='handleImport(event)'>";
+  h+="<button onclick='resetData()' style='background:#e74c3c'>&#128465; Сброс</button>";
+  h+="</div>";
+  
+  h+=renderPartnerSection();
+  h+="<div class='card'><h3>&#128241; Ярлык</h3>";
+  h+="<p style='font-size:13px;color:#666'>Меню → «Добавить на экран»</p></div>";
+  
+  h+="<div class='card'><p style='font-size:12px;color:#999;text-align:center'>Colibri v3.0</p></div>";
+  
+  c.innerHTML=h;
+}
+
+function exportData(){
+  var data={wedding:load("wedding"),guests:load("guests"),budget:load("budget"),tasks:load("tasks"),checklist:load("checklist")};
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="colibri-backup.json";
+  a.click();
+}
+
+function importData(){
+  document.getElementById("import_file").click();
+}
+
+function handleImport(e){
+  var file=e.target.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(ev){
+    try{
+      var data=JSON.parse(ev.target.result);
+      if(data.wedding)save("wedding",data.wedding);
+      if(data.guests)save("guests",data.guests);
+      if(data.budget)save("budget",data.budget);
+      if(data.tasks)save("tasks",data.tasks);
+      if(data.checklist)save("checklist",data.checklist);
+      console.log("Imported!");
+      render();
+    }catch(err){
+      console.log("Import error");
+    }
+  };
+  reader.readAsText(file);
+}
+
+function resetData(){
+  if(confirm("Удалить все данные? Это действие нельзя отменить.")){
+    localStorage.clear(); _vkStorage = {}; if(window.vkBridge){vkBridge.send("VKWebAppStorageGetKeys",{count:100}).then(function(r){(r.keys||[]).forEach(function(k){vkBridge.send("VKWebAppStorageSet",{key:k,value:""})})})}
+    render();
+  }
+}
+
+// Initialize default tables if not set
+if(load("tables")===null){
+  save("tables",[{name:"Стол 1",seats:8},{name:"Стол 2",seats:8}]);
+}
+
+render();startCountdown();
+
+
+</script>
+</body>
+</html>
