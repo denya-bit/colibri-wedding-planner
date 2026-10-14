@@ -765,16 +765,17 @@ function _directSave(key, val) {
   var _payload = _getAllData();
   // ЗАЩИТА: не отправляем пустые данные
   if (!_payload.wedding && (!_payload.guests || _payload.guests.length === 0)) return;
-  fetch(API_BASE + "/user-data", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({user_id: uid, payload: _payload})
-  }).then(function(r) {
-    if (r.ok) { console.log("Direct save OK"); }
-    else { console.log("Direct save FAIL:", r.status); }
-  }).catch(function(e) {
-    console.log("Direct save ERROR:", e.message);
-  });
+  var _body = JSON.stringify({user_id: uid, payload: _payload});
+  // Используем sendBeacon (обходит CORS в VK WebView)
+  if (navigator.sendBeacon) {
+    var blob = new Blob([_body], {type: "application/json"});
+    navigator.sendBeacon(API_BASE + "/user-data", blob);
+    console.log("Beacon sent:", _body.length, "bytes");
+  } else {
+    // Fallback: img pixel (обходит CORS)
+    var img = new Image();
+    img.src = API_BASE + "/user-data?beacon=1&data=" + encodeURIComponent(_body.substring(0, 2000));
+  }
 }
 
 function _initStorage(cb) {
@@ -1294,7 +1295,11 @@ function saveWeddingForm(){
   saveWedding(w);
   // Диагностика: что отправляется
   var _dbg = {bride: w.bride, uid: _syncUserId, api: API_BASE, fetchOk: typeof fetch};
-  fetch(API_BASE + "/user-data", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({user_id: _dbg.uid || 0, payload: {wedding: w, guests: load("guests")||[], budget: load("budget")||[], tasks: load("tasks")||[], vendors: load("vendors")||[], tables: load("tables")||[]}})}).then(function(r){ console.log("SAVED:", r.status); }).catch(function(e){ console.log("SAVE ERROR:", e.message); });
+  var _body2 = JSON.stringify({user_id: _dbg.uid || 0, payload: {wedding: w, guests: load("guests")||[], budget: load("budget")||[], tasks: load("tasks")||[], vendors: load("vendors")||[], tables: load("tables")||[]}});
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(API_BASE + "/user-data", new Blob([_body2], {type: "application/json"}));
+    console.log("Beacon sent from form:", _body2.length, "bytes");
+  }
   var btns=document.querySelectorAll("button");
   for(var i=0;i<btns.length;i++){
     if(btns[i].textContent.includes("Сохранить")){
