@@ -757,6 +757,33 @@ function save(key, val) {
   }
 }
 
+// ВОССТАНОВЛЕНИЕ С СЕРВЕРА через JSONP (обходит CORS в VK WebView)
+function _directRestore(cb) {
+  var uid = (typeof _syncUserId !== "undefined" && _syncUserId !== null && _syncUserId !== 0) ? _syncUserId : null;
+  if (uid === null) {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      var vid = p.get("vk_user_id");
+      if (vid && vid !== "0") { uid = parseInt(vid); _syncUserId = uid; }
+    } catch(e) {}
+  }
+  if (uid === null) { if (cb) cb(); return; }
+  var cbName = "_jsonp_cb_" + Date.now();
+  window[cbName] = function(res) {
+    if (res && res.ok && res.data) {
+      _loadFromServer(res.data);
+      console.log("JSONP restore OK");
+    }
+    try { delete window[cbName]; } catch(e) {}
+    if (cb) cb();
+  };
+  var s = document.createElement("script");
+  s.src = API_BASE + "/load?uid=" + uid + "&callback=" + cbName;
+  s.onerror = function() { try { delete window[cbName]; } catch(e) {} if (cb) cb(); };
+  document.body.appendChild(s);
+  setTimeout(function() { if (window[cbName]) { try { delete window[cbName]; } catch(e) {} if (cb) cb(); } }, 5000);
+}
+
 // ПРЯМОЕ сохранение на сервер — без couple_code, без условий
 function _directSave(key, val) {
   var uid = (typeof _syncUserId !== "undefined" && _syncUserId !== null) ? _syncUserId : 0;
