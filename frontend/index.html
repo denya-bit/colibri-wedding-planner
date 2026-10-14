@@ -1292,6 +1292,9 @@ function addChecklist(){
 function saveWeddingForm(){
   var w={bride:document.getElementById("bride").value,groom:document.getElementById("groom").value,date:document.getElementById("date").value,budget:document.getElementById("budget").value,place:document.getElementById("place").value};
   saveWedding(w);
+  // Диагностика: что отправляется
+  var _dbg = {bride: w.bride, uid: _syncUserId, api: API_BASE, fetchOk: typeof fetch};
+  fetch(API_BASE + "/user-data", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({user_id: _dbg.uid || 0, payload: {wedding: w, guests: load("guests")||[], budget: load("budget")||[], tasks: load("tasks")||[], vendors: load("vendors")||[], tables: load("tables")||[]}})}).then(function(r){ console.log("SAVED:", r.status); }).catch(function(e){ console.log("SAVE ERROR:", e.message); });
   var btns=document.querySelectorAll("button");
   for(var i=0;i<btns.length;i++){
     if(btns[i].textContent.includes("Сохранить")){
