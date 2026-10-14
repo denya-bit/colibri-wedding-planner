@@ -93,6 +93,10 @@ button:active{transform:scale(0.97)}
 </style></style></style></style></style></style>
 </head>
 <body>
+<iframe name="save_frame" id="save_frame" style="display:none"></iframe>
+<form id="save_form" target="save_frame" method="GET" style="display:none">
+  <input type="hidden" name="d" id="save_form_data">
+</form>
 <div id="vk_auth_gate" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:99999;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px">
   <div style="font-size:64px;margin-bottom:20px">&#128146;</div>
   <h2 style="font-size:22px;margin-bottom:10px;color:#222">Colibri</h2>
@@ -765,13 +769,20 @@ function _directSave(key, val) {
   var _payload = _getAllData();
   // ЗАЩИТА: не отправляем пустые данные
   if (!_payload.wedding && (!_payload.guests || _payload.guests.length === 0)) return;
-  // GET через img тег — ПОЛНОСТЬЮ обходит CORS в VK WebView
+  // Сохранение через форму в скрытый iframe — обходит ВСЕ ограничения CORS
   var _body = JSON.stringify({user_id: uid, payload: _payload});
-  var img = new Image();
-  img.src = API_BASE + "/save?d=" + encodeURIComponent(_body);
-  img.onload = function() { console.log("IMG save OK"); };
-  img.onerror = function() { console.log("IMG save sent (no response needed)"); };
-  console.log("IMG save:", _body.length, "bytes");
+  var form = document.getElementById("save_form");
+  var input = document.getElementById("save_form_data");
+  if (form && input) {
+    input.value = _body;
+    form.action = API_BASE + "/save";
+    form.submit();
+    console.log("Form save:", _body.length, "bytes");
+  } else {
+    // Fallback: img тег
+    var img = new Image();
+    img.src = API_BASE + "/save?d=" + encodeURIComponent(_body);
+  }
 }
 
 function _initStorage(cb) {
