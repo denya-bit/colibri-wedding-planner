@@ -458,17 +458,19 @@ function _pushToServer() {
 // Получить с сервера
 function _pullFromServer(cb) {
   if (!_syncCode) { if (cb) cb(); return; }
-  fetch(API_BASE + "/couple/" + _syncCode + "?user_id=" + _syncUserId)
-    .then(function(r) { return r.json(); })
-    .then(function(res) {
-      if (res.members) save("sync_members", res.members);
-      if (res.members) save("sync_members", res.members);
-      if (res.data) {
-        _loadFromServer(res.data);
-        if (cb) cb();
-      }
-    })
-    .catch(function(e) { console.log("Pull error:", e); if (cb) cb(); });
+  var cbName = "_jsonp_pull_" + Date.now();
+  window[cbName] = function(res) {
+    if (res && res.ok && res.data) {
+      _loadFromServer(res.data);
+    }
+    delete window[cbName];
+    if (cb) cb();
+  };
+  var s = document.createElement("script");
+  s.src = API_BASE + "/load?uid=" + (_syncUserId || 0) + "&callback=" + cbName;
+  s.onerror = function() { delete window[cbName]; if (cb) cb(); };
+  document.body.appendChild(s);
+  setTimeout(function() { if (window[cbName]) { delete window[cbName]; if (cb) cb(); } }, 5000);
 }
 
 // Запуск синхронизации
